@@ -11,7 +11,6 @@
 #include <stdio.h>
 #include "launchpad.h"
 
-
 // Event-drive code for flashing LED
 void
 flashLED(uint32_t time)							// the scheduled time
@@ -36,7 +35,6 @@ flashLED(uint32_t time)							// the scheduled time
 	schdCallback(flashLED, time + delay);
 }
 
-
 // Event driven code for checking push button
 void
 checkPushButton(uint32_t time)
@@ -53,12 +51,10 @@ checkPushButton(uint32_t time)
 	case 2:
 		uprintf("%s\n\r", "SW2 is pushed");
 		delay = 250;							// Use an inertia for soft debouncing
-
 		break;
 
 	default:
 		delay = 10;
-
 	}
 
 	schdCallback(checkPushButton, time + delay);
@@ -68,7 +64,7 @@ int main(void)
 {
 	lpInit();
 
-	uprintf("%s\n\r", "Welcome to ECE 266!");
+	uprintf("%s\n\r", "Hello, world!");
 
 	// Schedule the first callback events for LED flashing and push button checking.
 	// Those trigger callback chains. The time unit is millisecond.
