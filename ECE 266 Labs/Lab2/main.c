@@ -27,37 +27,92 @@ static uint8_t seg7Coding[10] = {
 		0b00000110, 		// digit 1
 		0b01011011,			// digit 2
 		0b01001111,			// digit 3
-		// MORE CODINGS
+		0b01100110,         // digit 4
+		0b01101101,         // digit 5
+		0b01111101,         // digit 6
+		0b00000111,         // digit 7
+		0b01111111,         // digit 8
+		0b01101111,         // digit 9
 };
 
 // The colon status: if colon == 0b10000000, then the colon is on,
 // otherwise it is off.
+
 static uint8_t colon = 0;
 
+uint32_t digit1 = 0;
+uint32_t digit2 = 0;
+uint32_t digit3 = 1;
+uint32_t digit4 = 0;
+
 // Update the clock display
-void
-clockUpdate(uint32_t time)								// pointer to a 4-byte array
+void clockUpdate(uint32_t time)							 	// pointer to a 4-byte array
 {
 	uint8_t code[4];									// The 7-segment code for the four clock digits
 
 	// Display 01:23 on the 7-segment displays
 	// The colon ':' will flash on and off every 0.5 seconds
-	code[0] = seg7Coding[3] + colon;
-	code[1] = seg7Coding[2] + colon;
-	code[2] = seg7Coding[1] + colon;
-	code[3] = seg7Coding[0] + colon;
+	code[0] = seg7Coding[digit1] + colon;
+	code[1] = seg7Coding[digit2] + colon;
+	code[2] = seg7Coding[digit3] + colon;
+	code[3] = seg7Coding[digit4] + colon;
 	seg7Update(code);
 
 	// Calculate the display digits and colon setting for the next update
-	if (colon == 0b00000000) {
+	if (colon == 0b00000000)
+	{
 		colon = 0b10000000;
 	}
-	else {
-		colon = 0b00000000;
+	else
+	{
+	    colon = 0b00000000;
+	}
+
+	// Time Incrementation
+
+	//First Digit
+    digit1 = digit1 + 1;
+
+    //Second Digit
+    if(digit1 > 9)
+    {
+	    digit2 = digit2 + 1;
+    }
+    //Third Digit
+    if(digit2 > 5)
+    {
+	    digit3 = digit3 + 1;
+    }
+    //Fourth Digit
+    if(digit3 > 9)
+    {
+	    digit4 = digit4 + 1;
+    }
+
+	while(digit1 > 9)
+	{
+	    digit1 = 0;
+	}
+	while(digit2 > 5)
+	{
+	    digit2 = 0;
+	}
+	while(digit3 > 9)
+	{
+	    digit3 = 0;
+	}
+	while(digit4 > 1)
+	{
+	    digit4 = 0;
+	}
+	while(digit4 == 1 && digit3 > 2)
+	{
+	    digit3 = 1;
+	    digit4 = 0;
 	}
 
 	// Call back after 1 second
-	schdCallback(clockUpdate, time + 500);
+	schdCallback(clockUpdate, time + 1000);
 }
 
 int main(void)
