@@ -46,10 +46,44 @@ uint32_t digit2 = 0;
 uint32_t digit3 = 0;
 uint32_t digit4 = 0;
 
+void checkPushButton(uint32_t time)
+{
+    int code = pbRead();
+    uint32_t delay;
+
+    switch (code) {
+    case 1:
+        // checking if switch 1 pressed for fast min
+        digit3 += 1;
+        while(digit3 > 9)       // When the first digit of minutes reaches doubt digits, the digit 1 is set to zero and digit2 is updated respectively
+                {
+                    digit3 = 0;
+                }
+        delay = 250;                            // Use an inertia for soft debouncing
+        break;
+
+    case 2:
+        // checking if switch 2 pressed for fast seconds
+        digit1 += 1;
+        while(digit1 > 9)       // When the first digit of second reaches doubt digits, the digit 1 is set to zero and digit2 is updated respectively
+                {
+                    digit1 = 0;
+                }
+        delay = 250;                            // Use an inertia for soft debouncing
+        break;
+
+    default:
+        delay = 10;
+    }
+
+    schdCallback(checkPushButton, time + delay);
+}
+
 // Update the clock display
 
 void clockUpdate(uint32_t time)         // pointer to a 4-byte array
 {
+
     uint8_t code[4];                    // The 7-segment code for the four clock digits
 
     // Display 00:00 at the begin and updates per 1 seconds
@@ -74,10 +108,7 @@ void clockUpdate(uint32_t time)         // pointer to a 4-byte array
     {
         //First Digit
         digit1 = digit1 + 1;
-        if(pbRead() == 2)       // checking if switch 2 pressed for fast seconds
-        {
-            digit1 = digit1 + 1;
-        }
+
         //Second Digit
         if(digit1 > 9)
         {
@@ -86,10 +117,6 @@ void clockUpdate(uint32_t time)         // pointer to a 4-byte array
 
         //Third Digit
         if(digit2 > 5)
-        {
-            digit3 = digit3 + 1;
-        }
-        if(pbRead() == 1)       // checking if switch 1 pressed for fast minutes
         {
             digit3 = digit3 + 1;
         }
@@ -143,6 +170,7 @@ int main(void)
     // Schedule the first callback events for LED flashing and push button checking.
     // Those trigger callback chains. The time unit is millisecond.
     schdCallback(clockUpdate, 1000);
+    schdCallback(checkPushButton, 50);
     // Loop forever
     while (true) {
         schdExecute();
