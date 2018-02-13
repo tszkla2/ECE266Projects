@@ -1229,3 +1229,211 @@ gmake: Target 'all' not remade because of errors.
 gmake[1]: 'Lab2.out' is up to date.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab2" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab2.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab2.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2_linkInfo.xml" --rom_model -o "Lab2.out" "./main.obj" "./seg7.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Lab2.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab2" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 144: error #527: a dependent statement may not be a declaration
+"../main.c", line 144: error #20: identifier "s" is undefined
+"../main.c", line 144: error #66: expected a ";"
+"../main.c", line 151: warning #12-D: parsing restarts here after previous syntax error
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab2" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+"../main.c", line 144: error #527: a dependent statement may not be a declaration
+"../main.c", line 144: error #20: identifier "s" is undefined
+"../main.c", line 144: error #66: expected a ";"
+"../main.c", line 151: warning #12-D: parsing restarts here after previous syntax error
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab2" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab2.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab2.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2_linkInfo.xml" --rom_model -o "Lab2.out" "./main.obj" "./seg7.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Lab2.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab2" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab2.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab2.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2_linkInfo.xml" --rom_model -o "Lab2.out" "./main.obj" "./seg7.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Lab2.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab2" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab2.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab2.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2_linkInfo.xml" --rom_model -o "Lab2.out" "./main.obj" "./seg7.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Lab2.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab2" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab2.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab2.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2_linkInfo.xml" --rom_model -o "Lab2.out" "./main.obj" "./seg7.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Lab2.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab2" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab2.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab2.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2_linkInfo.xml" --rom_model -o "Lab2.out" "./main.obj" "./seg7.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Lab2.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab2" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab2.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab2.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2_linkInfo.xml" --rom_model -o "Lab2.out" "./main.obj" "./seg7.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Lab2.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Lab2.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Lab2.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab2" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab2.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab2.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab2_linkInfo.xml" --rom_model -o "Lab2.out" "./main.obj" "./seg7.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Lab2.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab2 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Lab2.out' is up to date.
+
+**** Build Finished ****
