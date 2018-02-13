@@ -15,8 +15,8 @@
 ;****************************************************************
 				.global sub2
 sub2				.asmfunc
-
-
+				SUB r4, r0, r1
+				MOV r0, r4
 				BX		lr
 				.endasmfunc
 
@@ -27,9 +27,11 @@ sub2				.asmfunc
 ;****************************************************************
 				.global sub3
 sub3				.asmfunc
-
-
-				BX		lr
+				PUSH {r2, lr}
+				BL sub2
+				POP {r1}
+				BL sub2
+				POP {lr}
 				.endasmfunc
 
 ;****************************************************************
@@ -37,12 +39,15 @@ sub3				.asmfunc
 ;   Copy a string from src[] to dst[]. The dst[] buffer must be
 ;   large enough to hold the source string.
 ;****************************************************************
-				.global sub3
+				.global mystrcpy
 mystrcpy			.asmfunc
-				PUSH		{lr}
-
-
-				POP		{pc}
+				LDR r1, =srcStr
+				LDR r0, =dstStr
+				LDRB r2, [r], #1
+				STRB r2, [r0], #1
+				CMP r2, #0
+				BNE loop
+				B stop
 				.endasmfunc
 
 ;****************************************************************
@@ -51,7 +56,10 @@ mystrcpy			.asmfunc
 ;****************************************************************
 				.global calc
 calc				.asmfunc
-
+				MUL r4, r0, r1
+				ADD r5, r3, r4
+				SUB r6, r5, r0
+				MOV r6, r0
 
 				BX		lr
 				.endasmfunc
