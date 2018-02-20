@@ -21,13 +21,16 @@ stopWatchIncrement(seg7Display_t* seg7Display);
 // The running state of the stopwatch system
 enum {
     Reset, Run, Pause
-}  sysState = Run;
+}  sysState = Pause;
 
 // The initial state of the 7-segment display: "00:00" with colon on
 seg7Display_t seg7Display = {
     0, 0, 0, 0, 1
 };
 
+seg7Display_t seg7DisplayReset = {
+    0, 0, 0, 0, 1
+};
 // Callback function for updating clock watch
 void
 stopWatchUpdate(uint32_t time)                          // The scheduled time
@@ -36,7 +39,11 @@ stopWatchUpdate(uint32_t time)                          // The scheduled time
     if (sysState == Run) {
         stopWatchIncrement(&seg7Display);
     }
-
+    else if(sysState == Reset)
+    {
+        seg7Display = seg7DisplayReset;
+        sysState = Pause;
+    }
     seg7DigitUpdate(&seg7Display);
 
     // Call back after 10 milliseconds
@@ -54,19 +61,25 @@ checkPushButton(uint32_t time)
     switch (code) {
     case 1:                         // SW1 is the Reset button, only when the stopwatch is paused
 
-        //
-        // YOUR CODE
-        //
+        if(sysState == Pause)
+        {
+           sysState = Reset;
+        }
 
         delay = 250;                // software debouncing
         break;
 
     case 2:                         // SW2 is the Start/Pause/Resume button
 
-        //
-        // YOUR CODE
-        //
+        if(sysState == Run)
+        {
+            sysState = Pause;
+        }
 
+        else if(sysState == Pause)
+        {
+            sysState = Run;
+        }
         delay = 250;                // software debouncing
         break;
 
