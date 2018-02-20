@@ -28,9 +28,11 @@ seg7Display_t seg7Display = {
     0, 0, 0, 0, 1
 };
 
+// Struct for resetting the value of the main display back to "00:00"
 seg7Display_t seg7DisplayReset = {
     0, 0, 0, 0, 1
 };
+
 // Callback function for updating clock watch
 void
 stopWatchUpdate(uint32_t time)                          // The scheduled time
@@ -39,11 +41,13 @@ stopWatchUpdate(uint32_t time)                          // The scheduled time
     if (sysState == Run) {
         stopWatchIncrement(&seg7Display);
     }
+	// When stopwatch is at reset then make the display set to "00:00" and the stopwatch remains paused
     else if(sysState == Reset)
     {
         seg7Display = seg7DisplayReset;
         sysState = Pause;
     }
+	
     seg7DigitUpdate(&seg7Display);
 
     // Call back after 10 milliseconds
@@ -60,7 +64,7 @@ checkPushButton(uint32_t time)
 
     switch (code) {
     case 1:                         // SW1 is the Reset button, only when the stopwatch is paused
-
+		// Only when the stopwatch is pause will the reset option will be available 
         if(sysState == Pause)
         {
            sysState = Reset;
@@ -70,12 +74,13 @@ checkPushButton(uint32_t time)
         break;
 
     case 2:                         // SW2 is the Start/Pause/Resume button
-
+		// If the stopwatch is running then pause the stopwatch
         if(sysState == Run)
         {
             sysState = Pause;
         }
-
+		
+		// If the stopwatch is paused then run the stopwatch
         else if(sysState == Pause)
         {
             sysState = Run;
