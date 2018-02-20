@@ -1945,3 +1945,177 @@ gmake: Target 'all' not remade because of errors.
  
 
 **** Build Finished ****
+
+**** Clean-only build of configuration Debug for project Homework 4 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 clean -O 
+ 
+DEL /F  "Homework 4.hex"  "Homework 4.out" 
+DEL /F "homework4-asmfunc.obj" "homework4-cfunc.obj" "homework4-main.obj" 
+DEL /F "homework4-cfunc.d" "homework4-main.d" 
+DEL /F "homework4-asmfunc.d" 
+Could Not Find E:\UIC\JUNIOR\ECE 266\Homework\HW4\Debug\homework4-asmfunc.d
+'Finished clean'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework 4 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../homework4-asmfunc.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="E:/UIC/JUNIOR/ECE 266/Homework/HW4" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="homework4-asmfunc.d_raw"  "../homework4-asmfunc.asm"
+24 Assembly Errors, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'homework4-asmfunc.obj' failed
+"../homework4-asmfunc.asm", ERROR!   at line 19: [E0200] Bad term in expression
+					LDR r0, =0xFFFFFFFF
+
+"../homework4-asmfunc.asm", ERROR!   at line 19: [E0001] Illegal symbol
+					LDR r0, =0xFFFFFFFF
+
+"../homework4-asmfunc.asm", ERROR!   at line 19: [E0003] Unexpected trailing operand(s)
+					LDR r0, =0xFFFFFFFF
+
+"../homework4-asmfunc.asm", ERROR!   at line 20: [E0200] Bad term in expression
+					LDR r1, =0x00000002
+
+"../homework4-asmfunc.asm", ERROR!   at line 20: [E0001] Illegal symbol
+					LDR r1, =0x00000002
+
+"../homework4-asmfunc.asm", ERROR!   at line 20: [E0003] Unexpected trailing operand(s)
+					LDR r1, =0x00000002
+
+"../homework4-asmfunc.asm", ERROR!   at line 21: [E0200] Bad term in expression
+					LDR r2, =0x00000004
+
+"../homework4-asmfunc.asm", ERROR!   at line 21: [E0001] Illegal symbol
+					LDR r2, =0x00000004
+
+"../homework4-asmfunc.asm", ERROR!   at line 21: [E0003] Unexpected trailing operand(s)
+					LDR r2, =0x00000004
+
+"../homework4-asmfunc.asm", ERROR!   at line 22: [E0200] Bad term in expression
+					LDR r3, =0x00000006
+
+"../homework4-asmfunc.asm", ERROR!   at line 22: [E0001] Illegal symbol
+					LDR r3, =0x00000006
+
+"../homework4-asmfunc.asm", ERROR!   at line 22: [E0003] Unexpected trailing operand(s)
+					LDR r3, =0x00000006
+
+"../homework4-asmfunc.asm", ERROR!   at line 23: [E0200] Bad term in expression
+					LDR r4, =0x00000008
+
+"../homework4-asmfunc.asm", ERROR!   at line 23: [E0001] Illegal symbol
+					LDR r4, =0x00000008
+
+"../homework4-asmfunc.asm", ERROR!   at line 23: [E0003] Unexpected trailing operand(s)
+					LDR r4, =0x00000008
+
+"../homework4-asmfunc.asm", ERROR!   at line 24: [E0200] Bad term in expression
+					LDR r5, =0x0000000A
+
+"../homework4-asmfunc.asm", ERROR!   at line 24: [E0001] Illegal symbol
+					LDR r5, =0x0000000A
+
+"../homework4-asmfunc.asm", ERROR!   at line 24: [E0003] Unexpected trailing operand(s)
+					LDR r5, =0x0000000A
+
+"../homework4-asmfunc.asm", ERROR!   at line 25: [E0200] Bad term in expression
+					LDR r6, =0x0000000C
+
+"../homework4-asmfunc.asm", ERROR!   at line 25: [E0001] Illegal symbol
+					LDR r6, =0x0000000C
+
+"../homework4-asmfunc.asm", ERROR!   at line 25: [E0003] Unexpected trailing operand(s)
+					LDR r6, =0x0000000C
+
+"../homework4-asmfunc.asm", ERROR!   at line 26: [E0200] Bad term in expression
+					LDR r7, =0x0000000E
+
+"../homework4-asmfunc.asm", ERROR!   at line 26: [E0001] Illegal symbol
+					LDR r7, =0x0000000E
+
+"../homework4-asmfunc.asm", ERROR!   at line 26: [E0003] Unexpected trailing operand(s)
+					LDR r7, =0x0000000E
+
+
+Errors in Source - Assembler Aborted
+gmake: *** [homework4-asmfunc.obj] Error 1
+'Building file: "../homework4-cfunc.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="E:/UIC/JUNIOR/ECE 266/Homework/HW4" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="homework4-cfunc.d_raw"  "../homework4-cfunc.c"
+'Finished building: "../homework4-cfunc.c"'
+ 
+'Building file: "../homework4-main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="E:/UIC/JUNIOR/ECE 266/Homework/HW4" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="homework4-main.d_raw"  "../homework4-main.c"
+'Finished building: "../homework4-main.c"'
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Homework 4 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../homework4-asmfunc.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="E:/UIC/JUNIOR/ECE 266/Homework/HW4" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="homework4-asmfunc.d_raw"  "../homework4-asmfunc.asm"
+'Finished building: "../homework4-asmfunc.asm"'
+ 
+'Building target: "Homework 4.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Homework 4.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Homework 4_linkInfo.xml" --rom_model -o "Homework 4.out" "./homework4-asmfunc.obj" "./homework4-cfunc.obj" "./homework4-main.obj"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+warning #10247-D: creating output section ".text" without a SECTIONS specification
+warning #10247-D: creating output section ".const" without a SECTIONS specification
+warning #10247-D: creating output section ".data" without a SECTIONS specification
+warning #10247-D: creating output section ".bss" without a SECTIONS specification
+warning #10247-D: creating output section ".cinit" without a SECTIONS specification
+warning #10247-D: creating output section ".vtable" without a SECTIONS specification
+'Finished building target: "Homework 4.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Lab3.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab4 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../buzzer.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab4" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="buzzer.d_raw"  "../buzzer.asm"
+'Finished building: "../buzzer.asm"'
+ 
+'Building file: "../tm4c123gh6pm_startup_ccs.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab4" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="tm4c123gh6pm_startup_ccs.d_raw"  "../tm4c123gh6pm_startup_ccs.c"
+'Finished building: "../tm4c123gh6pm_startup_ccs.c"'
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab4" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab4.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab4.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab4_linkInfo.xml" --rom_model -o "Lab4.out" "./buzzer.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Lab4.out"'
+ 
+
+**** Build Finished ****
