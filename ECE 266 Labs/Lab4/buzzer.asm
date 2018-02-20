@@ -10,7 +10,7 @@
 ;					.global buzzerOff
 
 ; GPIO peripheral, port base and pin mask value for the buzzer
-; The buzzer is assumed to be connected to J17, and then the buzzer's
+; The buzzer is assumed to be connected to J16, and then the buzzer's
 ; signal pin is connected to PC4.
 BUZZER_PERIPH   .field  SYSCTL_PERIPH_GPIOC
 BUZZER_PORT     .field 	GPIO_PORTC_BASE
