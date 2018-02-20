@@ -1557,3 +1557,19 @@ Caused by: java.lang.NullPointerException
 !ENTRY com.ti.ccstudio.debug 1 0 2018-02-19 17:59:28.862
 !MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
 
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-02-19 18:25:38.121
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-02-19 18:25:38.129
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-02-19 18:25:38.133
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-02-19 18:25:38.137
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
