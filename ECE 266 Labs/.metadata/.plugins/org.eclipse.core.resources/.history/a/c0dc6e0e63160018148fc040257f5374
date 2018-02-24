@@ -39,7 +39,7 @@ motionInit      PUSH 	{LR}
 ;
 ; void motionActive(): Turn on the buzzer. It calls GPIOPinWrite() to write 1 to the signal pin.
 ;
-motionDetected  	PUSH  {LR}
+motionDected  	PUSH  {LR}
 
                 ; Write 1 to the GPIO pin that the buzzer uses:
 				; Call GPIOPinWrite(BUZZ_PORT, BUZZ_PIN, BUZZ_PIN)

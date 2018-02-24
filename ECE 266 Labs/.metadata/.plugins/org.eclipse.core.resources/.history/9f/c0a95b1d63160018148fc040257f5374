@@ -4,7 +4,10 @@
 // Initialize the motion detector
 void motionInit();
 
-//Function for detecting
-bool motionDetected();
+// Turn on the motion detector
+void motionOn();
+
+// Turn off the motion detector
+void motionOff();
 
 #endif // MOTION_H_INCLUDED
