@@ -4203,3 +4203,9 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.
 !ENTRY com.ti.ccstudio.debug 1 0 2018-02-27 10:10:23.959
 !MESSAGE DS_ERROR: CORTEX_M4_0: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
 
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-02-27 10:33:56.944
+!MESSAGE Indexed 'Lab5' (2 sources, 2 headers) in 0.11 sec: 35 declarations; 149 references; 12 unresolved inclusions; 0 syntax errors; 28 unresolved names (13%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-02-27 10:33:58.054
+!MESSAGE Indexed 'Lab5' (2 sources, 7 headers) in 0.13 sec: 211 declarations; 330 references; 8 unresolved inclusions; 0 syntax errors; 13 unresolved names (2.3%)
