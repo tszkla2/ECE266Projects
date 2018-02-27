@@ -1,5 +1,5 @@
-#ifndef MOTION_H_INCLUDED
-#define MOTION_H_INCLUDED
+#ifndef MOTION_H_
+#define MOTION_H_
 
 // Initialize the motion detector
 void motionInit();

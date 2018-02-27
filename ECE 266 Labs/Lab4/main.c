@@ -13,6 +13,8 @@
 #include <driverlib/sysctl.h>
 #include "launchpad.h"
 #include "buzzer.h"
+#include "motion.h"
+#include<math.h>
 
 // Switch type
 typedef enum {
@@ -21,12 +23,12 @@ typedef enum {
 
 // The states of buzz playing: the state of the buzzer system, the state of sound, the state of the
 // buzzer, and time left in the current sound state in millisecond
-static switch_t buzzerSysState = Off;
 static switch_t soundState = Off;
 static switch_t buzzerState = Off;
 static switch_t motionSysState = Off;
 static uint16_t timeLeft = 0;
 
+extern void InitSysCtrl(void);
 
 /*
  * Buzzer play callback function. It plays a buzz sound for 0.3 second, then be silent for 3 seconds.
@@ -41,45 +43,45 @@ void
 buzzerPlay(uint32_t time)
 {
     uint32_t delay = 1;
-if (motionSysState == On)
-{
-    if(motionDetected()){
-        if (buzzerSysState == On) {
-            switch (soundState) {
-            case Off:
-                if (timeLeft < delay) {              // switch to sound-on state
+
+    if (motionSysState == On) {
+        if(motionDetected())
+        {
+        switch (soundState) {
+        case Off:
+            if (timeLeft < delay) {              // switch to sound-on state
+                buzzerOn();
+                soundState = On;
+                buzzerState = On;
+                timeLeft = 300;
+            }
+            else {
+                timeLeft -= delay;
+            }
+            break;
+
+        case On:
+            if (timeLeft < delay) {              // switch to sound-off state
+                buzzerOff();
+                soundState = Off;
+                buzzerState = Off;
+                timeLeft = 3000;
+            }
+            else {
+                timeLeft -= delay;
+                switch (buzzerState) {           // if buzzer is on, turn it off
+                case Off:
                     buzzerOn();
-                    soundState = On;
                     buzzerState = On;
-                    timeLeft = 300;
-                }
-                else {
-                    timeLeft -= delay;
-                }
-                break;
+                    break;
 
-            case On:
-                if (timeLeft < delay) {              // switch to sound-off state
+                case On:                        // if buzzer is off, turn it on
                     buzzerOff();
-                    soundState = Off;
                     buzzerState = Off;
-                    timeLeft = 3000;
-                }
-                else {
-                    timeLeft -= delay;
-                    switch (buzzerState) {           // if buzzer is on, turn it off
-                    case Off:
-                        buzzerOn();
-                        buzzerState = On;
-                        break;
-
-                    case On:                        // if buzzer is off, turn it on
-                        buzzerOff();
-                        buzzerState = Off;
-                        break;
-                    }
+                    break;
                 }
             }
+        }
         }
 
         schdCallback(buzzerPlay, time + delay);    // call back in 2 ms
@@ -90,7 +92,6 @@ if (motionSysState == On)
         buzzerState = Off;
         timeLeft = 0;
     }
-}
 }
 
 /*
@@ -105,7 +106,7 @@ checkPushButton(uint32_t time)
 	switch (code) {
 	case 1:					                    // SW1: Start the buzzer
 	    if (motionSysState == Off) {
-	        schdCallback(buzzerPlay, time + 1);
+	        schdCallback(buzzerPlay, time + 1);     // schedule a callback to buzzerPlay()
 	        motionSysState = On;
 	        delay = 250;
 	    }
@@ -113,7 +114,6 @@ checkPushButton(uint32_t time)
 
 	case 2:                                     // SW2: Stop the buzzer
 		if (motionSysState == On) {
-		    schdCallback(buzzerPlay, time + 1);
 		    motionSysState = Off;
 		    delay = 250;
 		}
@@ -130,6 +130,7 @@ int main(void)
 {
 	lpInit();
 	buzzerInit();
+	motionInit();
 
 	uprintf("%s\n\r", "Lab 4 starts");
 

@@ -3,7 +3,7 @@
 ; Created by Zhao Zhang
 
 ; To include names declared in C
- .cdecls "stdint.h", "stdbool.h", "stdio.h", "inc/hw_memmap.h", "driverlib/pin_map.h", "driverlib/gpio.h", "driverlib/sysctl.h", "launchpad.h", "buzzer.h"
+ .cdecls "stdint.h", "stdbool.h", "stdio.h", "inc/hw_memmap.h", "driverlib/pin_map.h", "driverlib/gpio.h", "driverlib/sysctl.h", "launchpad.h", "buzzer.h", "motion.h"
 
 					.text
 ;					.global buzzerOn
