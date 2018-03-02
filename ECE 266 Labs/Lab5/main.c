@@ -15,6 +15,7 @@
 #include <driverlib/interrupt.h>
 #include <driverlib/systick.h>
 #include "launchpad.h"
+#include "motion.h"
 
 // Color defines
 #define     RED         0
@@ -61,13 +62,23 @@ ledFlash()
  * Interrupt handler for both push buttons (pins PF0 and PF4)
  */
 void
-pbIntrHandler()
+pbIntrHandlerSW1()
+{
+    // Clear interrupt. This is necessary, otherwise the interrupt handler will be executed forever.
+    GPIOIntClear(GPIO_PORTF_BASE, GPIO_PIN_4);
+
+    // Set LED color to green
+    colorSetting = GREEN;
+}
+
+void
+pbIntrHandlerSW2()
 {
 	// Clear interrupt. This is necessary, otherwise the interrupt handler will be executed forever.
-	GPIOIntClear(GPIO_PORTF_BASE, GPIO_PIN_0 | GPIO_PIN_4);
+	GPIOIntClear(GPIO_PORTF_BASE, GPIO_PIN_0);
 
 	// Set LED color to green
-	colorSetting = GREEN;
+	colorSetting = BLUE;
 }
 
 /*
@@ -81,11 +92,12 @@ setInterrupts()
 	SysTickIntDisable();
 
 	// Set interrupt on Port F, pin 0 (SW1) and pin 4 (SW2)
-	GPIOIntRegister(GPIO_PORTF_BASE, pbIntrHandler);			// register the interrupt handler
-	GPIOIntEnable(GPIO_PORTF_BASE, GPIO_PIN_0 | GPIO_PIN_4);	// enable interrupts on SW1 and SW2 input
-	GPIOIntTypeSet(GPIO_PORTF_BASE, GPIO_PIN_0 | GPIO_PIN_4, 	// interrupt on falling edge, note that SW1 and SW2 are active low
-			GPIO_FALLING_EDGE);
-	IntPrioritySet(INT_GPIOF, 0);							// raise interrupt level to 0 (highest) to make sure MCU wakes up
+	GPIOIntRegister(GPIO_PORTF_BASE, pbIntrHandlerSW1);         // register the interrupt handler
+	GPIOIntRegister(GPIO_PORTF_BASE, pbIntrHandlerSW2);
+	GPIOIntEnable(GPIO_PORTF_BASE, GPIO_PIN_0 | GPIO_PIN_4); // enable interrupts on SW1 and SW2 input
+	GPIOIntTypeSet(GPIO_PORTF_BASE, GPIO_PIN_0 | GPIO_PIN_4,     // interrupt on falling edge, note that SW1 and SW2 are active low
+	            GPIO_FALLING_EDGE);
+	IntPrioritySet(INT_GPIOF, 0);
 }
 
 int
@@ -96,8 +108,8 @@ main(void)
 
 	// IN YOUR SOLUTION CODE, call the function that initializes the PIR montion sensor,
 	//    which you wrote in Lab 4, e.g.
-	// pirInit();
 
+	motionInit();
 	// NOTE: In this lab, you should NOT use the callback scheduler because it will wake up the CPU
 	// from sleeping.
 
