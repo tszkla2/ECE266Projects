@@ -21,17 +21,17 @@ MOTION_PIN      .equ	GPIO_PIN_5
 ;
 ; void motionInit(): Initialze the motion peripheral, port, and pin direction
 ;
-motionInit      PUSH 	{LR}
+rotaryInit      PUSH 	{LR}
 				
 				; Initialize the GPIO peripheral for the port that the motion uses:
-                ;   Call SysCtlPeripheralEnable(MOTION_PERIPH)
-                LDR   r0, MOTION_PERIPH
+                ;   Call SysCtlPeripheralEnable(ROTARY_PERIPH)
+                LDR   r0, ROTARY_PERIPH
                 BL    SysCtlPeripheralEnable
 
                 ; Set the GPIO pin for the motion as input type:
-                ;   Call GPIOPinTypeGPIOInput(MOTION_PORT, MOTION_PIN)
-                LDR   r0, MOTION_PORT
-                MOV   r1, #MOTION_PIN
+                ;   Call GPIOPinTypeGPIOInput(ROTARY_PORT, ROTARY_PIN)
+                LDR   r0, ROTARY_PORT
+                MOV   r1, #ROTARY_PIN
                 BL    GPIOPinTypeGPIOInput
 
                 POP   {PC}
@@ -39,12 +39,12 @@ motionInit      PUSH 	{LR}
 ;
 ; void motionActive(): Turn on the buzzer. It calls GPIOPinWrite() to write 1 to the signal pin.
 ;
-motionDetected  	PUSH  {LR}
+rotarySamp  	PUSH  {LR}
 
                 ; Write 1 to the GPIO pin that the buzzer uses:
-				; Call GPIOPinWrite(BUZZ_PORT, BUZZ_PIN, BUZZ_PIN)
-                LDR   r0, MOTION_PORT
-                MOV   r1, #MOTION_PIN
+				; Call GPIOPinWrite(ROTARY_PORT, ROTARY_PIN, ROTARY_PIN)
+                LDR   r0, ROTARY_PORT
+                MOV   r1, #ROTARY_PIN
                 BL    GPIOPinRead
 
                 POP   {PC}

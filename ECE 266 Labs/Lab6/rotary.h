@@ -1,10 +1,10 @@
-#ifndef MOTION_H_
-#define MOTION_H_
+#ifndef ROTARY_H_
+#define ROTARY_H_
 
 // Initialize the motion detector
-void motionInit();
+void rotaryInit();
 
 //Function for detecting
-bool motionDetected();
+bool rotarySamp();
 
 #endif // MOTION_H_INCLUDED
