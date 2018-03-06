@@ -4437,3 +4437,25 @@ Unable to communicate with the device. Please check your connection.
 !ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:18:18.902
 !MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
 
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:44:22.717
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\Tom\Documents\GitHub\LabGroupB7\ECE 266 Labs\Lab5\Debug\Lab5.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:49:08.156
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\Tom\Documents\GitHub\LabGroupB7\ECE 266 Labs\Lab5\Debug\Lab5.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:57:01.924
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Connection with the target was unexpectedly lost.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:57:01.945
+!MESSAGE DS_ERROR: CORTEX_M4_0: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-03-06 10:59:27.655
+!MESSAGE Indexed 'Lab6' (2 sources, 0 headers) in 0.04 sec: 24 declarations; 118 references; 1 unresolved inclusions; 0 syntax errors; 2 unresolved names (1.4%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-03-06 10:59:28.466
+!MESSAGE Indexed 'Lab6' (2 sources, 1 headers) in 0.05 sec: 52 declarations; 142 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
