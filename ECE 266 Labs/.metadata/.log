@@ -4352,3 +4352,88 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.
 !ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 17:41:14.756
 !MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
 
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 18:33:17.064
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Connection with the target was unexpectedly lost.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 18:33:17.166
+!MESSAGE DS_ERROR: CORTEX_M4_0: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+
+!ENTRY org.eclipse.core.resources 4 1 2018-03-05 18:49:02.128
+!MESSAGE Problems occurred refreshing resources
+!SUBENTRY 1 org.eclipse.core.resources 4 1 2018-03-05 18:49:02.128
+!MESSAGE Problem finding next change, code: 1006
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:05:44.856
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error connecting to the target: Unable to communicate with the device. Please check your connection.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:05:45.446
+!MESSAGE DS_ERROR: Error connecting to the target:
+Unable to communicate with the device. Please check your connection.
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:10:21.296
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Writing Memory Block at 0x20000000 on Page 0 of Length 0x800 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:10:21.306
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:10:21.306
+!MESSAGE DS_ERROR: CORTEX_M4_0: Flash Programmer: Target failed to write 0x20000000
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:10:21.376
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:10:21.396
+!MESSAGE DS_ERROR: CORTEX_M4_0: File Loader: Failed to terminate flash programming: System Reset error. The requested reset was aborted.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:10:21.406
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: File: C:\Users\Tom\Documents\GitHub\LabGroupB7\ECE 266 Labs\Lab5\Debug\Lab5.out: Load failed.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:10:22.808
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:10:22.808
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:10:22.818
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:10:22.818
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:18:18.782
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:18:18.782
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:18:18.892
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:18:18.892
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:18:18.892
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-06 10:18:18.902
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+

@@ -22,10 +22,9 @@
 #define     BLUE        1
 #define     GREEN       2
 
-volatile int colorChoice;
-
 // Color display setting
-static volatile int colorSetting = BLUE;
+volatile int colorSetting = BLUE;
+
 static bool colorTable[3][3] = {
     {true, false, false},       // Red
     {false, true, false},       // Blue
@@ -67,15 +66,15 @@ void
 pbIntrHandlerSW()
 {
     // Clear interrupt. This is necessary, otherwise the interrupt handler will be executed forever.
-    GPIOIntClear(GPIO_PORTF_BASE, GPIO_PIN_4 | GPIO_PIN_0 | GPIO_PIN_5);
+    GPIOIntClear(GPIO_PORTF_BASE, GPIO_PIN_4 | GPIO_PIN_0);
+    GPIOIntClear(GPIO_PORTC_BASE, GPIO_PIN_5);
 
-    if(motionDetected())
-    {
-        colorSetting = RED;
-        printf("HELLO!!!!!!!!!!!");
-    }
 
-    int code = pbRead();
+        int code = pbRead();
+        if(motionDetected())
+        {
+            colorSetting = RED;
+        }
         switch (code) {
         case 1:                                     //
             colorSetting = GREEN;
@@ -85,9 +84,6 @@ pbIntrHandlerSW()
             colorSetting = BLUE;
             break;
         }
-
-
-
 }
 
 /*
@@ -102,10 +98,15 @@ setInterrupts()
 
 	// Set interrupt on Port F, pin 0 (SW1) and pin 4 (SW2)        // register the interrupt handler
 	GPIOIntRegister(GPIO_PORTF_BASE, pbIntrHandlerSW);
-	GPIOIntEnable(GPIO_PORTF_BASE, GPIO_PIN_4 | GPIO_PIN_0 | GPIO_PIN_5); // enable interrupts on SW1 and SW2 input
-	GPIOIntTypeSet(GPIO_PORTF_BASE, GPIO_PIN_4 | GPIO_PIN_0 | GPIO_PIN_5,     // interrupt on falling edge, note that SW1 and SW2 are active low
+	GPIOIntRegister(GPIO_PORTC_BASE, pbIntrHandlerSW);
+	GPIOIntEnable(GPIO_PORTF_BASE, GPIO_PIN_4 | GPIO_PIN_0);
+	GPIOIntEnable(GPIO_PORTC_BASE, GPIO_PIN_5);
+	GPIOIntTypeSet(GPIO_PORTF_BASE, GPIO_PIN_4 | GPIO_PIN_0,     // interrupt on falling edge, note that SW1 and SW2 are active low
 	            GPIO_FALLING_EDGE);
+	GPIOIntTypeSet(GPIO_PORTC_BASE, GPIO_PIN_5,     // interrupt on falling edge, note that SW1 and SW2 are active low
+	                GPIO_FALLING_EDGE);
 	IntPrioritySet(INT_GPIOF, 0);
+	IntPrioritySet(INT_GPIOC, 0);
 }
 
 int
