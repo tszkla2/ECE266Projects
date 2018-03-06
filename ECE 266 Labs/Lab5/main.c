@@ -22,6 +22,8 @@
 #define     BLUE        1
 #define     GREEN       2
 
+volatile int colorChoice;
+
 // Color display setting
 static volatile int colorSetting = BLUE;
 static bool colorTable[3][3] = {
@@ -62,23 +64,30 @@ ledFlash()
  * Interrupt handler for both push buttons (pins PF0 and PF4)
  */
 void
-pbIntrHandlerSW1()
+pbIntrHandlerSW()
 {
     // Clear interrupt. This is necessary, otherwise the interrupt handler will be executed forever.
-    GPIOIntClear(GPIO_PORTF_BASE, GPIO_PIN_4);
+    GPIOIntClear(GPIO_PORTF_BASE, GPIO_PIN_4 | GPIO_PIN_0 | GPIO_PIN_5);
 
-    // Set LED color to green
-    colorSetting = GREEN;
-}
+    if(motionDetected())
+    {
+        colorSetting = RED;
+        printf("HELLO!!!!!!!!!!!");
+    }
 
-void
-pbIntrHandlerSW2()
-{
-	// Clear interrupt. This is necessary, otherwise the interrupt handler will be executed forever.
-	GPIOIntClear(GPIO_PORTF_BASE, GPIO_PIN_0);
+    int code = pbRead();
+        switch (code) {
+        case 1:                                     //
+            colorSetting = GREEN;
+            break;
 
-	// Set LED color to green
-	colorSetting = BLUE;
+        case 2:                                     //
+            colorSetting = BLUE;
+            break;
+        }
+
+
+
 }
 
 /*
@@ -91,11 +100,10 @@ setInterrupts()
 	// otherwise, it will wake up Tiva C.
 	SysTickIntDisable();
 
-	// Set interrupt on Port F, pin 0 (SW1) and pin 4 (SW2)
-	GPIOIntRegister(GPIO_PORTF_BASE, pbIntrHandlerSW1);         // register the interrupt handler
-	GPIOIntRegister(GPIO_PORTF_BASE, pbIntrHandlerSW2);
-	GPIOIntEnable(GPIO_PORTF_BASE, GPIO_PIN_0 | GPIO_PIN_4); // enable interrupts on SW1 and SW2 input
-	GPIOIntTypeSet(GPIO_PORTF_BASE, GPIO_PIN_0 | GPIO_PIN_4,     // interrupt on falling edge, note that SW1 and SW2 are active low
+	// Set interrupt on Port F, pin 0 (SW1) and pin 4 (SW2)        // register the interrupt handler
+	GPIOIntRegister(GPIO_PORTF_BASE, pbIntrHandlerSW);
+	GPIOIntEnable(GPIO_PORTF_BASE, GPIO_PIN_4 | GPIO_PIN_0 | GPIO_PIN_5); // enable interrupts on SW1 and SW2 input
+	GPIOIntTypeSet(GPIO_PORTF_BASE, GPIO_PIN_4 | GPIO_PIN_0 | GPIO_PIN_5,     // interrupt on falling edge, note that SW1 and SW2 are active low
 	            GPIO_FALLING_EDGE);
 	IntPrioritySet(INT_GPIOF, 0);
 }

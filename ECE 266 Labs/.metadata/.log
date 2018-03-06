@@ -4270,3 +4270,85 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.
 
 !ENTRY com.ti.common.core 4 0 2018-02-28 13:02:02.886
 !MESSAGE debugServerDir=C:/ti/ccsv7/ccs_base/DebugServer
+!SESSION 2018-03-05 15:49:49.181 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 4 0 2018-03-05 15:49:56.484
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2018-03-05 15:49:56.494
+!MESSAGE debugServerDir=C:/ti/ccsv7/ccs_base/DebugServer
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-03-05 17:18:23.043
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@196fd70): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #11 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.ServicesShutdownSequence$3@60b10c): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #11 null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.CCSLaunch$3@3bd96a): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #11 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.ServicesShutdownSequence$3@60b10c): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #11 null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2018-03-05 17:18:23.043
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #11 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.ServicesShutdownSequence$3@60b10c): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #11
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2018-03-05 17:18:23.043
+!MESSAGE Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.CCSLaunch$3@3bd96a): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #11 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.ServicesShutdownSequence$3@60b10c): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #11 null' resulted in a rejected execution exception.
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 17:19:13.686
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 17:19:13.696
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-03-05 17:19:22.903
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@9e3136): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #11 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.ServicesShutdownSequence$3@1629582): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #11 null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.CCSLaunch$3@16f7b9c): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #11 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.ServicesShutdownSequence$3@1629582): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #11 null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2018-03-05 17:19:22.903
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #11 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.ServicesShutdownSequence$3@1629582): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #11
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2018-03-05 17:19:22.903
+!MESSAGE Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.CCSLaunch$3@16f7b9c): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #11 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.ServicesShutdownSequence$3@1629582): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #11 null' resulted in a rejected execution exception.
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 17:20:04.104
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 17:20:04.104
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 17:25:48.393
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 17:25:48.393
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 17:25:48.403
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 17:25:48.403
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY org.eclipse.cdt.dsf 4 10005 2018-03-05 17:26:00.404
+!MESSAGE Request for monitor: 'RequestMonitor (org.eclipse.cdt.dsf.concurrent.RequestMonitor@7434a5): Status ERROR: org.eclipse.cdt.dsf code=10005 Composite status null children=[Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #11 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.ServicesShutdownSequence$3@32f217): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #11 null Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.CCSLaunch$3@12dc71d): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #11 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.ServicesShutdownSequence$3@32f217): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #11 null' resulted in a rejected execution exception. null]' resulted in an error.
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 0 2018-03-05 17:26:00.404
+!MESSAGE Executor shut down while executing Sequence Sequence "", result for executing step #11 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.ServicesShutdownSequence$3@32f217): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #11
+!SUBENTRY 1 org.eclipse.cdt.dsf 4 10005 2018-03-05 17:26:00.404
+!MESSAGE Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.CCSLaunch$3@12dc71d): Status ERROR: org.eclipse.cdt.dsf code=0 Executor shut down while executing Sequence Sequence "", result for executing step #11 = Status ERROR: org.eclipse.cdt.dsf code=10005 Request for monitor: 'RequestMonitor (com.ti.ccstudio.debug.launch.ServicesShutdownSequence$3@32f217): Status OK: unknown code=0 OK null' resulted in a rejected execution exception. null, step #11 null' resulted in a rejected execution exception.
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 17:34:40.755
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 17:34:40.755
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 17:41:14.746
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-03-05 17:41:14.756
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
