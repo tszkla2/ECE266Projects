@@ -72,15 +72,15 @@ pbIntrHandlerSW()
 
         int code = pbRead();
         switch (code) {
-        case 1:                                     //
+        case 1: // Setting light to green if SW1 pressed
             colorSetting = GREEN;
             break;
 
-        case 2:                                     //
+        case 2: // Setting light to blue if SW2 pressed
             colorSetting = BLUE;
             break;
 
-        default:
+        default: // The only other activation of the light is from the motion sensor thus the light is red
             colorSetting = RED;
         }
 }
@@ -95,8 +95,9 @@ setInterrupts()
 	// otherwise, it will wake up Tiva C.
 	SysTickIntDisable();
 
-	// Set interrupt on Port F, pin 0 (SW1) and pin 4 (SW2)        // register the interrupt handler
+	// Set interrupt on Port F, pin 0 (SW1) and pin 4 (SW2)        
 	GPIOIntRegister(GPIO_PORTF_BASE, pbIntrHandlerSW);
+	// Set interrupt on Port C, pin 5 (motion)        
 	GPIOIntRegister(GPIO_PORTC_BASE, pbIntrHandlerSW);
 	GPIOIntEnable(GPIO_PORTF_BASE, GPIO_PIN_4 | GPIO_PIN_0);
 	GPIOIntEnable(GPIO_PORTC_BASE, GPIO_PIN_5);
