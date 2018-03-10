@@ -3,7 +3,7 @@
 ; Created by Zhao Zhang (edited Jonathan Wacker)
 
 ; To include names declared in C
- .cdecls "stdint.h", "stdbool.h", "stdio.h", "inc/hw_memmap.h", "driverlib/pin_map.h", "driverlib/gpio.h", "driverlib/sysctl.h", "launchpad.h", "motion.h", "buzzer.h"
+ .cdecls "stdint.h", "stdbool.h", "stdio.h", "inc/hw_memmap.h", "driverlib/pin_map.h", "driverlib/gpio.h", "driverlib/sysctl.h", "launchpad.h", "rotary.h"
  
  
 					.text
@@ -12,11 +12,11 @@
  
 
 ; GPIO peripheral, port base and pin mask value for the buzzer
-; The buzzer is assumed to be connected to J17, and then the buzzer's
-; signal pin is connected to PC4.
+; The buzzer is assumed to be connected to J17, andthen the buzzer's
+; signal pin is connected to PC4. 
 MOTION_PERIPH   .field  SYSCTL_PERIPH_GPIOC
 MOTION_PORT     .field 	GPIO_PORTC_BASE
-MOTION_PIN      .equ	GPIO_PIN_5
+MOTION_PIN      .equ	GPIO_PIN_4
 
 ;
 ; void motionInit(): Initialze the motion peripheral, port, and pin direction
