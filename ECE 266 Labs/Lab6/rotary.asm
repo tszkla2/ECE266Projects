@@ -14,9 +14,9 @@
 ; GPIO peripheral, port base and pin mask value for the buzzer
 ; The buzzer is assumed to be connected to J17, andthen the buzzer's
 ; signal pin is connected to PC4. 
-MOTION_PERIPH   .field  SYSCTL_PERIPH_GPIOC
-MOTION_PORT     .field 	GPIO_PORTC_BASE
-MOTION_PIN      .equ	GPIO_PIN_4
+ROTARY_PERIPH   .field  SYSCTL_PERIPH_ADC0
+ROTARY_PORT     .field 	ADC0_BASE
+ROTARY_PIN      .equ	GPIO_PIN_4
 
 ;
 ; void motionInit(): Initialze the motion peripheral, port, and pin direction
@@ -27,24 +27,50 @@ rotaryInit      PUSH 	{LR}
                 ;   Call SysCtlPeripheralEnable(ROTARY_PERIPH)
                 LDR   r0, ROTARY_PERIPH
                 BL    SysCtlPeripheralEnable
+				
+				; Configure ADC sequencer #0
+				LDR	  r0, ROTARY_PORT
+				MOV   r1, #0
+				LDR   r2, ADC_TRIGGER_PROCESSOR
+				MOV   r3, #0
+				BL    ADCSequenceConfigure
+				
+				; Configure a single step of the sequencer
+				LDR	  r0, ROTARY_PORT
+				MOV   r1, #0
+				MOV   r2, #0
+				MOV   r3, #(ADC_CTL_IE | ADC_CTL_END | ADC_CTL_CH2)
+				BL    ADCSequenceStepConfigure
 
                 ; Set the GPIO pin for the motion as input type:
                 ;   Call GPIOPinTypeGPIOInput(ROTARY_PORT, ROTARY_PIN)
                 LDR   r0, ROTARY_PORT
-                MOV   r1, #ROTARY_PIN
-                BL    GPIOPinTypeGPIOInput
+                MOV   r1, #0
+                BL    ADCSequenceEnable
 
                 POP   {PC}
 				
 ;
 ; void motionActive(): Turn on the buzzer. It calls GPIOPinWrite() to write 1 to the signal pin.
 ;
-rotarySamp  	PUSH  {LR}
-
-                ; Write 1 to the GPIO pin that the buzzer uses:
-				; Call GPIOPinWrite(ROTARY_PORT, ROTARY_PIN, ROTARY_PIN)
-                LDR   r0, ROTARY_PORT
-                MOV   r1, #ROTARY_PIN
-                BL    GPIOPinRead
-
-                POP   {PC}
+rotaryGet   	PUSH  {LR}		; save return address
+				SUB sp, #4  	; allocate a word for adcReading
+				
+				; Trigger
+				LDR   r0, ROTARY_PORT
+				MOV   r1, #0
+				BX	  ADCProcessorTrigger
+				
+				; Wait until the sample sequence has completed
+while_loop		LDR	  r0, ROTARY_PORT
+				MOV	  r1, #0
+				MOV   r2, #false
+				BX    ADCIntStatus
+				CMP	  r0, #0
+				BEQ   while_loop
+				
+				LDR   r0, ROTARY_PORT
+				MOV   r1, #0
+				MOV   r2, sp ; addr of adcReading is sp
+				BL    ADCSequenceDataGet
+				POP {r0, pc} ; pop adcReading to r0 and return

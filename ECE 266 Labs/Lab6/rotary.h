@@ -5,6 +5,6 @@
 void rotaryInit();
 
 //Function for detecting
-bool rotarySamp();
+uint16_t rotaryGet();
 
 #endif // MOTION_H_INCLUDED
