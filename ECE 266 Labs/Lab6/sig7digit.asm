@@ -15,6 +15,7 @@ g_seg7Coding			.byte 	00111111b			; digit 0
 					.byte	00000111b			; digit 7
 					.byte	01111111b			; digit 8
 					.byte	01101111b			; digit 9
+					.byte	00000000b			; digit BLANK
 
 ; Output code, equivalent to declare "uint8_t code[4]" as global variable
 					.bss 	g_outputBuffer, 4

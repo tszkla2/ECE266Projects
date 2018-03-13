@@ -25,12 +25,12 @@ enum {
 
 // The initial state of the 7-segment display: "00:00" with colon on
 seg7Display_t seg7Display = {
-    0, 0, 0, 0, 1
+    0, 0, 0, 0, 0
 };
 
 // Struct for resetting the value of the main display back to "00:00"
 seg7Display_t seg7DisplayReset = {
-    0, 0, 0, 0, 1
+    0, 0, 0, 0, 0
 };
 
 // Callback function for updating clock watch
