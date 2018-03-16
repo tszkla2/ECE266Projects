@@ -5,7 +5,7 @@
 
 ; The 7-segment coding table
 					.data
-g_seg7Coding		.byte 	00111111b			; digit 0
+g_seg7Coding			.byte 	00111111b			; digit 0
 					.byte 	00000110b 			; digit 1
 					.byte 	01011011b			; digit 2
 					.byte	01001111b			; digit 3
