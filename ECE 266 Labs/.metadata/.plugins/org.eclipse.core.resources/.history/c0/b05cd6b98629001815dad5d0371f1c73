@@ -67,6 +67,11 @@ void rotaryUse(uint32_t time)
 
         digit4 = 10;
 
+        if(digit1 == 0 && digit2 == 0 && digit3 == 0)
+        {
+            digit1 = 10;
+        }
+
         if(digit1 >= 0 && digit2 == 0 && digit3 == 0)
         {
             digit2 = 10;
