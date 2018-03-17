@@ -20,11 +20,11 @@ ROTARY_PIN      .equ	GPIO_PIN_3
 ROTARY_Trig		.field  ADC_TRIGGER_PROCESSOR
 
 ;
-; void rotaryInit(): Initialze the rotary peripheral, port, and pin direction
+; void motionInit(): Initialze the motion peripheral, port, and pin direction
 ;
 rotaryInit      PUSH 	{LR}
 				
-				; Initialize the GPIO peripheral for the port that the rotary uses:
+				; Initialize the GPIO peripheral for the port that the motion uses:
                 ;   Call SysCtlPeripheralEnable(ROTARY_PERIPH)
                 LDR   r0, ROTARY_PERIPH
                 BL    SysCtlPeripheralEnable
@@ -57,7 +57,9 @@ loop			LDR  r0, ROTARY_PERIPH
 
                 POP   {PC}
 				
-
+;
+; void motionActive(): Turn on the buzzer. It calls GPIOPinWrite() to write 1 to the signal pin.
+;
 rotaryGet   	PUSH  {LR}		; save return address
 				
 				; Trigger
