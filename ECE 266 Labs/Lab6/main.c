@@ -36,7 +36,7 @@ static uint8_t seg7Coding[11] = {
         0b00000111,         // digit 7
         0b01111111,         // digit 8
         0b01101111,         // digit 9
-        0b10000000,         // digit BLANK
+        0b00000000,         // digit BLANK
 };
 
 static int rotaryState = 0;
@@ -47,26 +47,16 @@ uint32_t digit3 = 0;
 uint32_t digit4 = 0;
 uint32_t delay = 50;
 
-seg7Display_t seg7Display = {
-    0, 0, 0, 0, 0
-};
-
-seg7Display_t seg7DisplayReset = {
-    0, 0, 0, 0, 0
-};
-
 void rotaryUse(uint32_t time)
 {
     uint8_t code[4];
     uint16_t curNum = rotaryGet();
     double holdNum;
 
-    uprintf("here1");
-
     if(rotaryState == 0)
     {
         holdNum = curNum;
-        holdNum = (holdNum / 4090)*100;
+        holdNum = (holdNum / 4090) * 100;
         curNum = (int)holdNum;
 
         digit1 = curNum % 10;
@@ -126,10 +116,10 @@ void rotaryUse(uint32_t time)
 
     uprintf("%n", curNum);
 
-    code[0] = seg7Coding[digit1] + 0;
-    code[1] = seg7Coding[digit2] + 0;
-    code[2] = seg7Coding[digit3] + 0;
-    code[3] = seg7Coding[digit4] + 0;
+    code[0] = seg7Coding[digit1] + 0b00000000;
+    code[1] = seg7Coding[digit2] + 0b00000000;
+    code[2] = seg7Coding[digit3] + 0b00000000;
+    code[3] = seg7Coding[digit4] + 0b00000000;
     seg7Update(code);
 
     schdCallback(rotaryUse, time + delay);
@@ -143,12 +133,12 @@ checkPushButton(uint32_t time)
 
     switch (code) {
     case 1:
-        rotaryState = 0; uprintf("here2");
+        rotaryState = 0;
         delay = 250;
         break;
 
     case 2:
-        rotaryState = 1; uprintf("here3");
+        rotaryState = 1;
         delay = 250;
         break;
 
@@ -169,8 +159,6 @@ main(void){
 
 
 	uprintf("%s\n\r", "Lab 6: Knob Control");
-
-	//seg7DigitUpdate(&seg7Display);
 
 	schdCallback(rotaryUse, 1000);
 	schdCallback(checkPushButton, 1005);
