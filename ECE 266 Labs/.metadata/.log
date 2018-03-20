@@ -7933,3 +7933,9 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.
 
 !ENTRY com.ti.common.core 4 0 2018-03-20 09:57:55.681
 !MESSAGE debugServerDir=C:/ti/ccsv7/ccs_base/DebugServer
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-03-20 10:29:21.360
+!MESSAGE Indexed 'Lab7' (3 sources, 2 headers) in 0.22 sec: 65 declarations; 344 references; 27 unresolved inclusions; 0 syntax errors; 79 unresolved names (16%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-03-20 10:29:22.540
+!MESSAGE Indexed 'Lab7' (3 sources, 7 headers) in 0.24 sec: 241 declarations; 534 references; 19 unresolved inclusions; 0 syntax errors; 55 unresolved names (6.6%)
