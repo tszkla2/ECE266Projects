@@ -3,7 +3,7 @@
 ; Created by Zhao Zhang (edited Jonathan Wacker)
 
 ; To include names declared in C
- .cdecls "stdint.h", "stdbool.h", "stdio.h", "inc/hw_memmap.h", "driverlib/adc.h", "driverlib/pin_map.h", "driverlib/gpio.h", "driverlib/sysctl.h", "launchpad.h", "ranger.h"
+ .cdecls "stdint.h", "stdbool.h", "stdio.h", "inc/hw_memmap.h", "driverlib/adc.h", "driverlib/pin_map.h", "driverlib/gpio.h", "driverlib/sysctl.h", "launchpad.h", "ranger.h", "driverlib/time.h"
  
  
 					.text
@@ -55,12 +55,37 @@ rangerInit      PUSH 	{LR}
 
 rangerGet   	PUSH  	{LR}		; save return address
 				
-				; 	Sending a starting pulse
+				; 	---Sending a starting pulse for analysis
 				LDR		r0, RANGER_PORT
 				LDR		r1, RANGER_PIN
 				BL		GPIOPinTypeGPIOOutput
 				
-				;	Configure time to pin and work accordingly 
+				;	--low waits 2
+				LDR		r0, RANGER_PORT
+				LDR		r1, RANGER_PINLDR
+				LDR		r2, #0
+				BL		GPIOPinWrite
+				
+				LDR		r0, #2
+				BL 		waitUs
+				
+				;	--High waits 5
+				LDR		r0, RANGER_PORT
+				LDR		r1, RANGER_PINLDR
+				LDR		r2, RANGER_PIN
+				BL		GPIOPinWrite
+				
+				LDR		r0, #5
+				BL 		waitUs
+				
+				;	--Restore to fall edge
+				LDR		r0, RANGER_PORT
+				LDR		r1, RANGER_PINLDR
+				LDR		r2, #0
+				BL		GPIOPinWrite
+				
+				
+				;	---Configure time to pin and work accordingly 
 				LDR 	r0, RANGER_BASE
 				LDR 	r1, RANGER_PIN
 				BL		GPIOPinTypeTimer
@@ -68,27 +93,14 @@ rangerGet   	PUSH  	{LR}		; save return address
 				MOV 	r1, #TIMER_A
 				BL		GPIOPinCongfigure
 				
-				;	Clearing any fake interrupts
+				;	-Clearing any fake interrupts
 				LDR 	r0, RANGER_BASE
 				LDR 	r1, TIMER_CAPA_EVENT
 				BL		TimeIntClear
 				
-				LDR		r0, #5
-				BL 		waitUs
+				;	---Obtaining rising and falling edge values
 				
-				
-				
-				LDR 	r0, RANGER_BASE
-				LDR 	r1, RANGER_PIN
-				BL		GPIOPinTypeTimer
-				
-				MOV 	r1, #TIMER_A
-				BL		GPIOPinConfigure
-				
-				
-				;	Obtaining rising and falling edge values
-				
-				;	Looping and waiting for trigger
+				;	--Looping and waiting for trigger of rising edge
 while_One		LDR 	r0, RANGER_BASE
 				LDR		r1, #false
 				BL		TimerIntStatus
@@ -99,14 +111,19 @@ while_One		LDR 	r0, RANGER_BASE
 				MOV 	r1, #TIMER_A
 				BL 		TimerValueGet
 				
+				; 	-Push risingTime
+				PUSH 	{r0}
 				
-				PUSH 	{r0} ; Push risingTime
+				;	-Clearing any fake interrupts
+				LDR 	r0, RANGER_BASE
+				LDR 	r1, TIMER_CAPA_EVENT
+				BL		TimeIntClear
 				
-				; call other function(s)
+				;	--Looping and waiting for trigger of falling edge
 while_Two		LDR 	r0, RANGER_BASE
 				LDR		r1, #false
 				BL		TimerIntStatus
-				CMP		r0, #false
+				CMP		r0, #true
 				BEQ		while_Two
 				
 				LDR		r0, #2
@@ -118,9 +135,7 @@ while_Two		LDR 	r0, RANGER_BASE
 				
 				PUSH 	{r0} ; Push fallingTime
 				
-				; call other function(s)
-				
-				;	Clearing any fake interrupts
+				;	-Clearing any fake interrupts
 				LDR 	r0, RANGER_BASE
 				LDR 	r1, TIMER_CAPA_EVENT
 				BL		TimeIntClear
@@ -130,7 +145,7 @@ while_Two		LDR 	r0, RANGER_BASE
 				POP 	{r2, r0} ; r1 <= risingTime, r0 <= fallingTime
 				POP 	{r1, r1} ; r1 <= risingTime, r0 <= fallingTime
 				SUB		r0, r1
-				MUL		r0, ;!!!SOUND SPEED!!!
-				DIV		r0, 32
+				MUL		r0, #340
+				DIV		r0, #2
 
 				POP 	{r0, pc} ; pop final value to r0 and return
