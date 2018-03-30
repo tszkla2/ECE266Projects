@@ -15,89 +15,122 @@
 ; The buzzer is assumed to be connected to J17, andthen the buzzer's
 ; signal pin is connected to PC4. 
 RANGER_PERIPH   .field  SYSCTL_PERIPH_WTIMER0
+RANGER_PERIPHTW	.field  SYSCTL_PERIPH_GPIOC
+RANGER_BASE		.field  WTIMER0_BASE
 RANGER_PORT     .field 	GPIO_PORTC_BASE
 RANGER_PIN      .equ	GPIO_PIN_5
 RANGER_Trig		.field  ADC_TRIGGER_PROCESSOR
+
 
 ;
 ; void rangerInit(): Initialze the rotary peripheral, port, and pin direction
 ;
 rangerInit      PUSH 	{LR}
 				
-				; Initialize the GPIO peripheral for the port that the rotary uses:
-                ;   Call SysCtlPeripheralEnable(RANGER_PERIPH)
+				; 	Initialize the GPIO peripheral for the port that the ranger uses:
                 LDR   	r0, RANGER_PERIPH
                 BL    	SysCtlPeripheralEnable
 				
-				; Preip
-loop			LDR  	r0, RANGER_PERIPH
-				BL   	SysCtlPeripheralReady
-				TEQ  	r0, #1
-				BNE  	loop
-
-				; Configure ADC sequencer #0
-				LDR	  	r0, ROTARY_PORT
-				MOV   	r1, #0
-				LDR  	r2, ROTARY_Trig
-				MOV   	r3, #0
-				BL    	TimerConfigure
+				LDR   	r0, RANGER_PERIPHTW
+                BL    	SysCtlPeripheralEnable
 				
-				; Configure event
-				LDR	  	r0, ROTARY_PORT
-				MOV   	r1, #0
-				LDR   	r2, ROTARY_Trig
-				MOV   	r3, #0
-				LDR   	r4, TIMER_EVENT_POS_EDGE
-				MOV   	r5, #0
-				BL	  	TimerControlEvent
+				;	Time configuring
+				LDR		r0, RANGER_BASE
+				MOV r1, #TIMER_CFG_SPLIT_PAIR
+				ORR r1, #TIMER_CFG_A_CAP_TIME_UP
+				BL 		TimerConfigure
 				
-				; Time Trig configure
-				LDR	  	r0, ROTARY_PORT
-				MOV   	r1, #0
-				LDR  	r2, ROTARY_Trig
-				MOV   	r3, #0
-				BL    	TimerEnable
+				;	Time edge trigger
+				LDR		r0, RANGER_BASE
+				MOV 	r1, #TIMER_A
+				LDR		r2, TIMER_EVENT_BOTH_EDGES
+				BL		TimerControlEvent
 				
-				; Interpreting timer status
-				LDR	  	r0, ROTARY_PORT
-				MOV   	r1, #0
-				LDR  	r2, #false
-				MOV   	r3, #0
-				BL		TimerIntStatus
-				
-				; Configure a single step of the sequencer
-loop_two		MOV     r0, #100
-				BX		waitUS			; Time delay for 100 milsec
-				LDR	  	r0, ROTARY_PORT
-				MOV   	r1, #0
-				LDR	  	r0, RANGER_Trig
-				MOV   	r1, #0
-				BL    	TimerIntClear
-				TEQ  	r0, #1
-				BNE  	loop_two
-
+				;	Activates timer
+				LDR		r0, RANGER_BASE
+				MOV 	r1, #TIMER_A
+				BL		TimerEnable
                 POP   	{PC}
 				
 
 rangerGet   	PUSH  	{LR}		; save return address
 				
-				; Trigger
-				LDR   	r0, ROTARY_PORT
-				MOV   	r1, #0
-				BL	  	ADCProcessorTrigger
+				; 	Sending a starting pulse
+				LDR		r0, RANGER_PORT
+				LDR		r1, RANGER_PIN
+				BL		GPIOPinTypeGPIOOutput
 				
-				; Wait until the sample sequence has completed
-loop_three		LDR	  	r0, ROTARY_PORT
-				MOV	 	r1, #0
-				MOV   	r2, #0
-				BL    	ADCIntStatus
-				CMP  	r0, #0
-				BEQ  	loop_three
+				;	Configure time to pin and work accordingly 
+				LDR 	r0, RANGER_BASE
+				LDR 	r1, RANGER_PIN
+				BL		GPIOPinTypeTimer
 				
-				LDR   	r0, ROTARY_PORT
-				MOV   	r1, #0
-				SUB   	SP, #4
-				MOV   	r2, sp ; addr of adcReading is sp
-				BL    	ADCSequenceDataGet
+				MOV 	r1, #TIMER_A
+				BL		GPIOPinCongfigure
+				
+				;	Clearing any fake interrupts
+				LDR 	r0, RANGER_BASE
+				LDR 	r1, TIMER_CAPA_EVENT
+				BL		TimeIntClear
+				
+				LDR		r0, #5
+				BL 		waitUs
+				
+				
+				
+				LDR 	r0, RANGER_BASE
+				LDR 	r1, RANGER_PIN
+				BL		GPIOPinTypeTimer
+				
+				MOV 	r1, #TIMER_A
+				BL		GPIOPinConfigure
+				
+				
+				;	Obtaining rising and falling edge values
+				
+				;	Looping and waiting for trigger
+while_One		LDR 	r0, RANGER_BASE
+				LDR		r1, #false
+				BL		TimerIntStatus
+				CMP		r0, #false
+				BEQ		while_One
+				
+				LDR 	r0, TIMER_BASE
+				MOV 	r1, #TIMER_A
+				BL 		TimerValueGet
+				
+				
+				PUSH 	{r0} ; Push risingTime
+				
+				; call other function(s)
+while_Two		LDR 	r0, RANGER_BASE
+				LDR		r1, #false
+				BL		TimerIntStatus
+				CMP		r0, #false
+				BEQ		while_Two
+				
+				LDR		r0, #2
+				BL 		waitUs
+				
+				LDR 	r0, TIMER_BASE
+				MOV 	r1, #TIMER_A
+				BL 		TimerValueGet
+				
+				PUSH 	{r0} ; Push fallingTime
+				
+				; call other function(s)
+				
+				;	Clearing any fake interrupts
+				LDR 	r0, RANGER_BASE
+				LDR 	r1, TIMER_CAPA_EVENT
+				BL		TimeIntClear
+				
+				
+				;	Calculation
+				POP 	{r2, r0} ; r1 <= risingTime, r0 <= fallingTime
+				POP 	{r1, r1} ; r1 <= risingTime, r0 <= fallingTime
+				SUB		r0, r1
+				MUL		r0, ;!!!SOUND SPEED!!!
+				DIV		r0, 32
 
-				POP 	{r0, pc} ; pop adcReading to r0 and return
+				POP 	{r0, pc} ; pop final value to r0 and return
