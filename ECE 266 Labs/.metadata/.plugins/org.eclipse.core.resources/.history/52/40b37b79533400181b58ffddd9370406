@@ -124,6 +124,8 @@ while_Two		LDR 	r0, RANGER_BASE
 				CMP		r0, #true
 				BEQ		while_Two
 				
+				MOV		r0, #2
+				BL 		waitUs
 				
 				LDR 	r0, RANGER_BASE
 				MOV 	r1, #TIMER_A

@@ -66,7 +66,7 @@ rangerGet   	PUSH  	{LR}		; save return address
 				BL		GPIOPinWrite
 				
 				MOV		r0, #2
-				BL 		waitUs
+				BL 		waitUS
 				
 				;	--High waits 5
 				LDR		r0, RANGER_PORT
@@ -75,7 +75,7 @@ rangerGet   	PUSH  	{LR}		; save return address
 				BL		GPIOPinWrite
 				
 				MOV	r0, #5
-				BL 		waitUs
+				BL 		waitUS
 				
 				;	--Restore to fall edge
 				LDR		r0, RANGER_PORT

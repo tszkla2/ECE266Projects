@@ -19,6 +19,7 @@ RANGER_PERIPHTW	.field  SYSCTL_PERIPH_GPIOC
 RANGER_BASE		.field  WTIMER0_BASE
 RANGER_PORT     .field 	GPIO_PORTC_BASE
 RANGER_PIN      .equ	GPIO_PIN_5
+RANGER_Trig		.field  ADC_TRIGGER_PROCESSOR
 
 
 ;
@@ -124,6 +125,8 @@ while_Two		LDR 	r0, RANGER_BASE
 				CMP		r0, #true
 				BEQ		while_Two
 				
+				MOV		r0, #2
+				BL 		waitUs
 				
 				LDR 	r0, RANGER_BASE
 				MOV 	r1, #TIMER_A
