@@ -9,30 +9,22 @@
 
 >> Compilation failure
 subdir_rules.mk:9: recipe for target 'main.obj' failed
-"../main.c", line 18: fatal error #1965: cannot open source file "rotary.h"
-1 catastrophic error detected in the compilation of "../main.c".
-Compilation terminated.
+"../main.c", line 29: error #80: expected a type specifier
+"../main.c", line 29: error #80: expected a type specifier
+"../main.c", line 29: warning #78-D: this declaration has no storage class or type specifier
+"../main.c", line 29: error #148: declaration is incompatible with "void TimerEnable(uint32_t, uint32_t)" (declared at line 243 of "C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/timer.h")
+"../main.c", line 74: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 79: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 79: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 97: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 102: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 102: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 106: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 106: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 106: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 153: warning #225-D: function "rotaryInit" declared implicitly
+3 errors detected in the compilation of "../main.c".
 gmake: *** [main.obj] Error 1
-'Building file: "../sig7digit.asm"'
-'Invoking: ARM Compiler'
-"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="sig7digit.d_raw"  "../sig7digit.asm"
-'Finished building: "../sig7digit.asm"'
- 
-'Building file: "../sw-increment.asm"'
-'Invoking: ARM Compiler'
-"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="sw-increment.d_raw"  "../sw-increment.asm"
-'Finished building: "../sw-increment.asm"'
- 
-'Building file: "../seg7.c"'
-'Invoking: ARM Compiler'
-"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="seg7.d_raw"  "../seg7.c"
-'Finished building: "../seg7.c"'
- 
-'Building file: "../tm4c123gh6pm_startup_ccs.c"'
-'Invoking: ARM Compiler'
-"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="tm4c123gh6pm_startup_ccs.d_raw"  "../tm4c123gh6pm_startup_ccs.c"
-'Finished building: "../tm4c123gh6pm_startup_ccs.c"'
- 
 gmake: Target 'all' not remade because of errors.
 
 **** Build Finished ****

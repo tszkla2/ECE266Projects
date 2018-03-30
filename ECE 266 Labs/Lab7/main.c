@@ -14,15 +14,19 @@
 #include <driverlib/sysctl.h>
 #include <driverlib/interrupt.h>
 #include <driverlib/systick.h>
+#include <driverlib/timer.h>
 #include "launchpad.h"
-#include "rotary.h"
 #include "seg7.h"
 #include "seg7digit.h"
+#include "ranger.h"
 #include "inc/hw_memmap.h"
 #include "inc/hw_types.h"
 #include "driverlib/debug.h"
 #include "driverlib/sysctl.h"
 #include "driverlib/adc.h"
+#include "driverlib/timer.h"
+
+TimerEnable(1, TIMER_BOTH);
 
 
 static uint8_t seg7Coding[11] = {
@@ -50,7 +54,7 @@ uint32_t delay = 50;
 void rotaryUse(uint32_t time)
 {
     uint8_t code[4];
-    uint16_t curNum = rotaryGet();
+    uint16_t curNum = rangerGet();
     double holdNum;
 
     if(rotaryState == 0)
