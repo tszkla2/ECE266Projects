@@ -11,7 +11,9 @@
 >> Compilation failure
 subdir_rules.mk:16: recipe for target 'ranger.obj' failed
 "../ranger.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  GPIO_PORTC_BASE
   ADC_TRIGGER_PROCESSOR
+  WTIMER0_BASE
 
 Errors in Source - Assembler Aborted
 gmake: *** [ranger.obj] Error 1

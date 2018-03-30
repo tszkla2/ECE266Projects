@@ -3,7 +3,7 @@
 ; Created by Zhao Zhang (edited Jonathan Wacker)
 
 ; To include names declared in C
- .cdecls "stdint.h", "stdbool.h", "stdio.h", "inc/hw_memmap.h", "driverlib/pin_map.h", "driverlib/gpio.h", "driverlib/sysctl.h", "launchpad.h", "ranger.h", "driverlib/timer.h"
+ .cdecls "stdint.h", "stdbool.h", "stdio.h", "driverlib/pin_map.h", "driverlib/gpio.h", "driverlib/sysctl.h", "launchpad.h", "ranger.h", "driverlib/timer.h"
  
  
 					.text
@@ -99,7 +99,6 @@ rangerGet   	PUSH  	{LR}		; save return address
 				BL		TimerIntClear
 				
 				;	---Obtaining rising and falling edge values
-				
 				;	--Looping and waiting for trigger of rising edge
 while_One		LDR 	r0, RANGER_BASE
 				MOV		r1, #false
