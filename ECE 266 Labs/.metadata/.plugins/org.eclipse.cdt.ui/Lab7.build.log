@@ -3,28 +3,18 @@
 
 "C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
  
-'Building file: "../main.c"'
+'Building file: "../ranger.asm"'
 'Invoking: ARM Compiler'
-"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ranger.d_raw"  "../ranger.asm"
+1 Assembly Error, No Assembly Warnings
 
 >> Compilation failure
-subdir_rules.mk:9: recipe for target 'main.obj' failed
-"../main.c", line 29: error #80: expected a type specifier
-"../main.c", line 29: error #80: expected a type specifier
-"../main.c", line 29: warning #78-D: this declaration has no storage class or type specifier
-"../main.c", line 29: error #148: declaration is incompatible with "void TimerEnable(uint32_t, uint32_t)" (declared at line 243 of "C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/timer.h")
-"../main.c", line 74: warning #188-D: pointless comparison of unsigned integer with zero
-"../main.c", line 79: warning #188-D: pointless comparison of unsigned integer with zero
-"../main.c", line 79: warning #188-D: pointless comparison of unsigned integer with zero
-"../main.c", line 97: warning #188-D: pointless comparison of unsigned integer with zero
-"../main.c", line 102: warning #188-D: pointless comparison of unsigned integer with zero
-"../main.c", line 102: warning #188-D: pointless comparison of unsigned integer with zero
-"../main.c", line 106: warning #188-D: pointless comparison of unsigned integer with zero
-"../main.c", line 106: warning #188-D: pointless comparison of unsigned integer with zero
-"../main.c", line 106: warning #188-D: pointless comparison of unsigned integer with zero
-"../main.c", line 153: warning #225-D: function "rotaryInit" declared implicitly
-3 errors detected in the compilation of "../main.c".
-gmake: *** [main.obj] Error 1
+subdir_rules.mk:16: recipe for target 'ranger.obj' failed
+"../ranger.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  ADC_TRIGGER_PROCESSOR
+
+Errors in Source - Assembler Aborted
+gmake: *** [ranger.obj] Error 1
 gmake: Target 'all' not remade because of errors.
 
 **** Build Finished ****

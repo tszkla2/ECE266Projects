@@ -26,8 +26,12 @@
 #include "driverlib/adc.h"
 #include "driverlib/timer.h"
 
-TimerEnable(1, TIMER_BOTH);
+enum {
+    Reset, Run, Pause
+}
+sysState = Pause;
 
+uint32_t rangerState = 1;
 
 static uint8_t seg7Coding[11] = {
         0b00111111,         // digit 0
@@ -43,48 +47,50 @@ static uint8_t seg7Coding[11] = {
         0b00000000,         // digit BLANK
 };
 
-static int rotaryState = 0;
-
 uint32_t digit1 = 0;
 uint32_t digit2 = 0;
 uint32_t digit3 = 0;
 uint32_t digit4 = 0;
 uint32_t delay = 50;
 
-void rotaryUse(uint32_t time)
+void rangerUse(uint32_t time)
 {
     uint8_t code[4];
     uint16_t curNum = rangerGet();
     double holdNum;
 
-    if(rotaryState == 0)
+    if(rangerState == 1)
     {
-        holdNum = curNum;
-        holdNum = (holdNum / 4090) * 100;
-        curNum = (int)holdNum;
-
         digit1 = curNum % 10;
         curNum = curNum / 10;
         digit2 = curNum % 10;
         curNum = curNum / 10;
         digit3 = curNum % 10;
+        curNum = curNum / 10;
+        digit4 = curNum % 10;
 
-        digit4 = 10;
-
-        if(digit1 >= 0 && digit2 == 0 && digit3 == 0)
-        {
-            digit2 = 10;
-        }
-
-        if(digit1 >= 0 && digit2 >= 0 && digit3 == 0)
-        {
-            digit3 = 10;
-        }
+            if(digit1 >= 0 && digit2 == 0 && digit3 == 0 && digit4 == 0)
+            {
+                digit2 = 10;
+            }
+            if(digit1 >= 0 && digit2 >= 0 && digit3 == 0 && digit4 == 0)
+            {
+                digit3 = 10;
+            }
+            if(digit1 >= 0 && digit2 >= 0 && digit3 >= 0 && digit4 == 0)
+            {
+                digit4 = 10;
+            }
 
     }
 
-    else
+    else if(rangerState == 2)
     {
+
+            holdNum = curNum;
+            holdNum = holdNum / 25.4;
+            curNum = (int)holdNum;
+
             digit1 = curNum % 10;
             curNum = curNum / 10;
             digit2 = curNum % 10;
@@ -98,7 +104,6 @@ void rotaryUse(uint32_t time)
                     {
                         digit2 = 10;
                     }
-
             if(digit1 >= 0 && digit2 >= 0 && digit3 == 0 && digit4 == 0)
                     {
                         digit3 = 10;
@@ -109,7 +114,18 @@ void rotaryUse(uint32_t time)
                     }
     }
 
-    uprintf("%n", curNum);
+    else if(rangerState == 0)
+    {
+        if(sysState == Run)
+        {
+            sysState = Pause;
+        }
+
+        else if(sysState == Pause)
+        {
+            sysState = Run;
+        }
+    }
 
     code[0] = seg7Coding[digit1] + 0b00000000;
     code[1] = seg7Coding[digit2] + 0b00000000;
@@ -117,7 +133,7 @@ void rotaryUse(uint32_t time)
     code[3] = seg7Coding[digit4] + 0b00000000;
     seg7Update(code);
 
-    schdCallback(rotaryUse, time + delay);
+    schdCallback(rangerUse, time + delay);
 }
 
 void
@@ -128,12 +144,24 @@ checkPushButton(uint32_t time)
 
     switch (code) {
     case 1:
-        rotaryState = 0;
+        rangerState = 0;
         delay = 250;
         break;
 
     case 2:
-        rotaryState = 1;
+        if(rangerState == 1)
+        {
+            rangerState = 2;
+        }
+        else if(rangerState == 2)
+        {
+            rangerState = 1;
+        }
+        else if(rangerState == 0)
+        {
+            rangerState = 1;
+        }
+
         delay = 250;
         break;
 
@@ -150,12 +178,12 @@ main(void){
 
     lpInit();
     seg7Init();
-    rotaryInit();
+    rangerInit();
 
 
-	uprintf("%s\n\r", "Lab 6: Knob Control");
+	uprintf("%s\n\r", "Lab 7: ");
 
-	schdCallback(rotaryUse, 1000);
+	schdCallback(rangerUse, 1000);
 	schdCallback(checkPushButton, 1005);
 
 	while(true)
