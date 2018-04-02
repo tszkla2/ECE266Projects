@@ -3,7 +3,7 @@
 ; Created by Zhao Zhang (edited Jonathan Wacker)
 
 ; To include names declared in C
- .cdecls "stdint.h", "stdbool.h", "stdio.h", "driverlib/pin_map.h", "driverlib/gpio.h", "driverlib/sysctl.h", "launchpad.h", "ranger.h", "driverlib/timer.h"
+ .cdecls "stdint.h", "stdbool.h", "inc/hw_memmap.h", "driverlib/pin_map.h", "driverlib/gpio.h", "driverlib/sysctl.h", "launchpad.h", "ranger.h", "driverlib/timer.h"
  
  
 					.text

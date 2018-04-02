@@ -25,6 +25,7 @@
 #include "driverlib/sysctl.h"
 #include "driverlib/adc.h"
 #include "driverlib/timer.h"
+#include "driverlib/gpio.h"
 
 enum {
     Reset, Run, Pause
@@ -47,10 +48,10 @@ static uint8_t seg7Coding[11] = {
         0b00000000,         // digit BLANK
 };
 
-uint32_t digit1 = 0;
-uint32_t digit2 = 0;
-uint32_t digit3 = 0;
-uint32_t digit4 = 0;
+uint32_t digit1 = 5;
+uint32_t digit2 = 5;
+uint32_t digit3 = 5;
+uint32_t digit4 = 5;
 uint32_t delay = 50;
 
 void rangerUse(uint32_t time)

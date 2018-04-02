@@ -11545,3 +11545,452 @@ gmake: *** [ranger.obj] Error 1
 gmake: Target 'all' not remade because of errors.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../ranger.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ranger.d_raw"  "../ranger.asm"
+1 Assembly Error, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'ranger.obj' failed
+"../ranger.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  GPIO_PORTC_BASE
+  WTIMER0_BASE
+
+Errors in Source - Assembler Aborted
+gmake: *** [ranger.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../ranger.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ranger.d_raw"  "../ranger.asm"
+1 Assembly Error, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'ranger.obj' failed
+"../ranger.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  GPIO_PORTC_BASE
+  WTIMER0_BASE
+
+Errors in Source - Assembler Aborted
+gmake: *** [ranger.obj] Error 1
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 73: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 77: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 77: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 81: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 81: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 81: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 104: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 108: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 108: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 112: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 112: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 112: warning #188-D: pointless comparison of unsigned integer with zero
+'Finished building: "../main.c"'
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../ranger.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ranger.d_raw"  "../ranger.asm"
+1 Assembly Error, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'ranger.obj' failed
+"../ranger.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  GPIO_PORTC_BASE
+  WTIMER0_BASE
+
+Errors in Source - Assembler Aborted
+gmake: *** [ranger.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../ranger.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ranger.d_raw"  "../ranger.asm"
+1 Assembly Error, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'ranger.obj' failed
+"../ranger.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  GPIO_PORTC_BASE
+  WTIMER0_BASE
+
+Errors in Source - Assembler Aborted
+gmake: *** [ranger.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../ranger.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ranger.d_raw"  "../ranger.asm"
+1 Assembly Error, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'ranger.obj' failed
+"../ranger.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  GPIO_PORTC_BASE
+  WTIMER0_BASE
+
+Errors in Source - Assembler Aborted
+gmake: *** [ranger.obj] Error 1
+'Building file: "../seg7.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="seg7.d_raw"  "../seg7.c"
+'Finished building: "../seg7.c"'
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../ranger.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ranger.d_raw"  "../ranger.asm"
+1 Assembly Error, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'ranger.obj' failed
+"../ranger.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  GPIO_PORTC_BASE
+  WTIMER1_BASE
+
+Errors in Source - Assembler Aborted
+gmake: *** [ranger.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../ranger.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ranger.d_raw"  "../ranger.asm"
+1 Assembly Error, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'ranger.obj' failed
+"../ranger.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  GPIO_PORTC_BASE
+  WTIMER0_BASE
+
+Errors in Source - Assembler Aborted
+gmake: *** [ranger.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../ranger.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ranger.d_raw"  "../ranger.asm"
+1 Assembly Error, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'ranger.obj' failed
+"../ranger.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  GPIO_PORTC_BASE
+  WTIMER0_BASE
+
+Errors in Source - Assembler Aborted
+gmake: *** [ranger.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../ranger.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ranger.d_raw"  "../ranger.asm"
+1 Assembly Error, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'ranger.obj' failed
+"../ranger.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  GPIO_PORTC_BASE
+  WTIMER0_BASE
+
+Errors in Source - Assembler Aborted
+gmake: *** [ranger.obj] Error 1
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 72: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 76: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 76: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 80: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 80: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 80: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 103: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 107: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 107: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 111: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 111: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 111: warning #188-D: pointless comparison of unsigned integer with zero
+'Finished building: "../main.c"'
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../ranger.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ranger.d_raw"  "../ranger.asm"
+1 Assembly Error, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'ranger.obj' failed
+"../ranger.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  GPIO_PORTC_BASE
+  WTIMER0_BASE
+
+Errors in Source - Assembler Aborted
+gmake: *** [ranger.obj] Error 1
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 73: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 77: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 77: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 81: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 81: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 81: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 104: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 108: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 108: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 112: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 112: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 112: warning #188-D: pointless comparison of unsigned integer with zero
+'Finished building: "../main.c"'
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../ranger.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ranger.d_raw"  "../ranger.asm"
+1 Assembly Error, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:16: recipe for target 'ranger.obj' failed
+"../ranger.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  GPIO_PORTC_BASE
+  WTIMER0_BASE
+
+Errors in Source - Assembler Aborted
+gmake: *** [ranger.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../ranger.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="ranger.d_raw"  "../ranger.asm"
+'Finished building: "../ranger.asm"'
+ 
+'Building target: "Lab7.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab7.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab7_linkInfo.xml" --rom_model -o "Lab7.out" "./main.obj" "./ranger.obj" "../ranger.obj" "./seg7.obj" "./sig7digit.obj" "./sw-increment.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+"C:\\Users\\Tom\\AppData\\Local\\Temp\\{143FEB6E-B85C-4801-A377-E3925D0B5BE1}", line 23: fatal error #10004: unrecognized file:  "../ranger.obj"
+
+gmake[1]: *** [Lab7.out] Error 1
+>> Compilation failure
+makefile:149: recipe for target 'Lab7.out' failed
+makefile:145: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building target: "Lab7.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab7.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab7_linkInfo.xml" --rom_model -o "Lab7.out" "./main.obj" "./ranger.obj" "./seg7.obj" "./sig7digit.obj" "./sw-increment.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Lab7.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Lab7.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Lab7.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Lab7.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Lab7.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 73: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 77: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 77: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 81: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 81: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 81: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 104: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 108: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 108: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 112: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 112: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 112: warning #188-D: pointless comparison of unsigned integer with zero
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab7.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab7.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab7_linkInfo.xml" --rom_model -o "Lab7.out" "./main.obj" "./ranger.obj" "./seg7.obj" "./sig7digit.obj" "./sw-increment.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Lab7.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Lab7.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Lab7.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../seg7.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="seg7.d_raw"  "../seg7.c"
+'Finished building: "../seg7.c"'
+ 
+'Building target: "Lab7.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab7.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab7_linkInfo.xml" --rom_model -o "Lab7.out" "./main.obj" "./ranger.obj" "./seg7.obj" "./sig7digit.obj" "./sw-increment.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Lab7.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab7 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab7" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 73: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 77: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 77: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 81: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 81: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 81: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 104: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 108: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 108: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 112: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 112: warning #188-D: pointless comparison of unsigned integer with zero
+"../main.c", line 112: warning #188-D: pointless comparison of unsigned integer with zero
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab7.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab7.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab7_linkInfo.xml" --rom_model -o "Lab7.out" "./main.obj" "./ranger.obj" "./seg7.obj" "./sig7digit.obj" "./sw-increment.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Lab7.out"'
+ 
+
+**** Build Finished ****
