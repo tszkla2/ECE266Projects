@@ -27,12 +27,9 @@
 #include "driverlib/timer.h"
 #include "driverlib/gpio.h"
 
-enum {
-    Reset, Run, Pause
-}
-sysState = Pause;
 
-uint32_t rangerState = 1;
+uint32_t rangerState = 0;	// 0 - pause; 1 - run
+uint32_t unitState = 0;		// 0 - mm; 1 - inch
 
 static uint8_t seg7Coding[11] = {
         0b00111111,         // digit 0
@@ -59,8 +56,9 @@ void rangerUse(uint32_t time)
     uint8_t code[4];
     uint16_t curNum = rangerGet();
     double holdNum;
-
-    if(rangerState == 1)
+	if(rangerState == 1){
+	// --- MM value
+    if(unitState == 0) 
     {
         digit1 = curNum % 10;
         curNum = curNum / 10;
@@ -84,8 +82,9 @@ void rangerUse(uint32_t time)
             }
 
     }
-
-    else if(rangerState == 2)
+	
+	// --- Inch value
+    else if(unitState == 1)
     {
 
             holdNum = curNum;
@@ -115,7 +114,7 @@ void rangerUse(uint32_t time)
                     }
     }
 
-    else if(rangerState == 0)
+    /*else if(rangerState == 0)
     {
         if(sysState == Run)
         {
@@ -126,14 +125,15 @@ void rangerUse(uint32_t time)
         {
             sysState = Run;
         }
-    }
+    }*/
 
     code[0] = seg7Coding[digit1] + 0b00000000;
     code[1] = seg7Coding[digit2] + 0b00000000;
     code[2] = seg7Coding[digit3] + 0b00000000;
     code[3] = seg7Coding[digit4] + 0b00000000;
     seg7Update(code);
-
+	}
+	
     schdCallback(rangerUse, time + delay);
 }
 
@@ -145,22 +145,24 @@ checkPushButton(uint32_t time)
 
     switch (code) {
     case 1:
-        rangerState = 0;
+		// Pausing clock
+		if(rangerState == 0)		// on
+			rangerState = 1;
+		else if(rangerState == 1)	// off
+			rangerState = 0;
+			
         delay = 250;
         break;
 
     case 2:
-        if(rangerState == 1)
+		// Changing unit state
+        if(unitState == 0)
         {
-            rangerState = 2;
+            unitState = 1;
         }
-        else if(rangerState == 2)
+        else if(unitState == 1)
         {
-            rangerState = 1;
-        }
-        else if(rangerState == 0)
-        {
-            rangerState = 1;
+            unitState = 0;
         }
 
         delay = 250;
