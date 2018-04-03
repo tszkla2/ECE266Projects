@@ -94,31 +94,31 @@ void rangerUse(uint32_t time)
     else if(unitState == 1)
     {
 
-            holdNum = curNum;
-            holdNum = holdNum / 25.4;
-            curNum = (int)holdNum;
+        holdNum = curNum;
+        holdNum = holdNum / 25.4;
+        curNum = (int)holdNum;
 
-            digit1 = curNum % 10;
-            curNum = curNum / 10;
-            digit2 = curNum % 10;
-            curNum = curNum / 10;
-            digit3 = curNum % 10;
-            curNum = curNum / 10;
-            digit4 = curNum % 10;
+        digit1 = curNum % 10;
+        curNum = curNum / 10;
+        digit2 = curNum % 10;
+        curNum = curNum / 10;
+        digit3 = curNum % 10;
+        curNum = curNum / 10;
+        digit4 = curNum % 10;
 
 
-            if(digit1 >= 0 && digit2 == 0 && digit3 == 0 && digit4 == 0)
-                    {
-                        digit2 = 10;
-                    }
-            if(digit1 >= 0 && digit2 >= 0 && digit3 == 0 && digit4 == 0)
-                    {
-                        digit3 = 10;
-                    }
-            if(digit1 >= 0 && digit2 >= 0 && digit3 >= 0 && digit4 == 0)
-                    {
-                        digit4 = 10;
-                    }
+        if(digit1 >= 0 && digit2 == 0 && digit3 == 0 && digit4 == 0)
+        {
+            digit2 = 10;
+		}
+        if(digit1 >= 0 && digit2 >= 0 && digit3 == 0 && digit4 == 0)
+        {
+            digit3 = 10;
+        }
+		if(digit1 >= 0 && digit2 >= 0 && digit3 >= 0 && digit4 == 0)
+        {
+            digit4 = 10;
+        }
     }
 
     code[0] = seg7Coding[digit1] + 0b00000000;

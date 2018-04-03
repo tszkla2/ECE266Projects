@@ -19,6 +19,7 @@ RANGER_PERIPHTW	.field  SYSCTL_PERIPH_GPIOC
 RANGER_BASE		.field  WTIMER0_BASE
 RANGER_PORT     .field 	GPIO_PORTC_BASE
 RANGER_PIN      .equ	GPIO_PIN_5
+RANGER_TIME		.field  TIMER_A
 
 
 ;
@@ -35,35 +36,35 @@ rangerInit      PUSH 	{LR}
 				
 				;	Time configuring
 				LDR		r0, RANGER_BASE
-				MOV r1, #TIMER_CFG_SPLIT_PAIR
-				ORR r1, #TIMER_CFG_A_CAP_TIME_UP
+				MOV 	r1, #TIMER_CFG_SPLIT_PAIR
+				ORR 	r1, #TIMER_CFG_A_CAP_TIME_UP
 				BL 		TimerConfigure
 				
 				;	Time edge trigger
 				LDR		r0, RANGER_BASE
-				MOV 	r1, #TIMER_A
+				MOV 	r1, #RANGER_TIME
 				MOV		r2, #TIMER_EVENT_BOTH_EDGES
 				BL		TimerControlEvent
 				
 				;	Activates timer
 				LDR		r0, RANGER_BASE
-				MOV 	r1, #TIMER_A
+				MOV 	r1, #RANGER_TIME
 				BL		TimerEnable
                 POP   	{PC}
 				
 
 rangerGet   	PUSH  	{LR}		; save return address
 				
+				
 				; 	---Sending a starting pulse for analysis
 				LDR		r0, RANGER_PORT
 				MOV		r1, #RANGER_PIN
 				BL		GPIOPinTypeGPIOOutput
-				
+
 				;	--low waits 2
 				LDR		r0, RANGER_PORT
 				MOV		r1, #RANGER_PIN
 				MOV		r2, #0
-				BL		GPIOPinWrite
 				
 				MOV		r0, #2
 				BL 		waitUs
@@ -89,13 +90,14 @@ rangerGet   	PUSH  	{LR}		; save return address
 				MOV 	r1, #RANGER_PIN
 				BL		GPIOPinTypeTimer
 				
-				MOV 	r1, #TIMER_A
+				MOV 	r1, #GPIO_PC4_WT0CCP0
 				BL		GPIOPinConfigure
 				
 				;	-Clearing any fake interrupts
 				LDR 	r0, RANGER_BASE
 				MOV 	r1, #TIMER_CAPA_EVENT
 				BL		TimerIntClear
+				
 				
 				;	---Obtaining rising and falling edge values
 				;	--Looping and waiting for trigger of rising edge
@@ -105,12 +107,13 @@ while_One		LDR 	r0, RANGER_BASE
 				CMP		r0, #false
 				BEQ		while_One
 				
+				;	-Get value
 				LDR 	r0, RANGER_BASE
-				MOV 	r1, #TIMER_A
-				BL 		TimerValueGet
+				MOV 	r1, #RANGER_TIME
+				BL		TimerValueGet
 				
-				; 	-Push risingTime
-				PUSH 	{r0}
+				; 	-Push value to variable
+				MOV 	r3, r0
 				
 				;	-Clearing any fake interrupts
 				LDR 	r0, RANGER_BASE
@@ -121,15 +124,16 @@ while_One		LDR 	r0, RANGER_BASE
 while_Two		LDR 	r0, RANGER_BASE
 				MOV		r1, #false
 				BL		TimerIntStatus
-				CMP		r0, #true
+				CMP		r0, #false
 				BEQ		while_Two
 				
-				
+				;	-Get value
 				LDR 	r0, RANGER_BASE
-				MOV 	r1, #TIMER_A
+				MOV 	r1, #RANGER_TIME
 				BL 		TimerValueGet
 				
-				PUSH 	{r0} ; Push fallingTime
+				; 	-Push value to variable
+				MOV 	r4, r0
 				
 				;	-Clearing any fake interrupts
 				LDR 	r0, RANGER_BASE
@@ -137,11 +141,9 @@ while_Two		LDR 	r0, RANGER_BASE
 				BL		TimerIntClear
 				
 				
-				;	Calculation
-				POP 	{r2, r0} ; r1 <= risingTime, r0 <= fallingTime
-				POP 	{r1, r1} ; r1 <= risingTime, r0 <= fallingTime
-				SUB		r0, r1
-				MOV     r1, #340
+				;	---Calculation
+				SUB		r0, r4, r3
+				UDIV	r0,	#340, #50000
 				MUL		r0, r1
 				MOV     r1, #2
 				UDIV	r0,	r0, r1
