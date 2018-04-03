@@ -28,9 +28,6 @@
 #include "driverlib/gpio.h"
 
 
-uint32_t rangerState = 0;	// 0 - pause; 1 - run
-uint32_t unitState = 0;		// 0 - mm; 1 - inch
-
 static uint8_t seg7Coding[11] = {
         0b00111111,         // digit 0
         0b00000110,         // digit 1
@@ -51,6 +48,9 @@ uint32_t digit3 = 5;
 uint32_t digit4 = 5;
 uint32_t delay = 50;
 
+static int rangerState = 0;		// 0 - pause; 1 - run
+static int unitState = 0;		// 0 - mm; 1 - inch
+
 void rangerUse(uint32_t time)
 {
     uint8_t code[4];
@@ -58,29 +58,36 @@ void rangerUse(uint32_t time)
     double holdNum;
 	if(rangerState == 1){
 	// --- MM value
-    if(unitState == 0) 
-    {
-        digit1 = curNum % 10;
-        curNum = curNum / 10;
-        digit2 = curNum % 10;
-        curNum = curNum / 10;
-        digit3 = curNum % 10;
-        curNum = curNum / 10;
-        digit4 = curNum % 10;
+		if(unitState == 0) 
+		{
+			if(curNum > 9999){
+				digit1 = 9;
+				digit2 = 9;
+				digit3 = 9;
+				digit4 = 9;
+			}
+			else{
+			digit1 = curNum % 10;
+			curNum = curNum / 10;
+			digit2 = curNum % 10;
+			curNum = curNum / 10;
+			digit3 = curNum % 10;
+			curNum = curNum / 10;
+			digit4 = curNum % 10;
 
-            if(digit1 >= 0 && digit2 == 0 && digit3 == 0 && digit4 == 0)
-            {
-                digit2 = 10;
-            }
-            if(digit1 >= 0 && digit2 >= 0 && digit3 == 0 && digit4 == 0)
-            {
-                digit3 = 10;
-            }
-            if(digit1 >= 0 && digit2 >= 0 && digit3 >= 0 && digit4 == 0)
-            {
-                digit4 = 10;
-            }
-
+				if(digit1 >= 0 && digit2 == 0 && digit3 == 0 && digit4 == 0)
+				{
+					digit2 = 10;
+				}
+				if(digit1 >= 0 && digit2 >= 0 && digit3 == 0 && digit4 == 0)
+				{
+					digit3 = 10;
+				}
+				if(digit1 >= 0 && digit2 >= 0 && digit3 >= 0 && digit4 == 0)
+				{
+					digit4 = 10;
+				}
+		}
     }
 	
 	// --- Inch value
@@ -114,19 +121,6 @@ void rangerUse(uint32_t time)
                     }
     }
 
-    /*else if(rangerState == 0)
-    {
-        if(sysState == Run)
-        {
-            sysState = Pause;
-        }
-
-        else if(sysState == Pause)
-        {
-            sysState = Run;
-        }
-    }*/
-
     code[0] = seg7Coding[digit1] + 0b00000000;
     code[1] = seg7Coding[digit2] + 0b00000000;
     code[2] = seg7Coding[digit3] + 0b00000000;
@@ -157,13 +151,9 @@ checkPushButton(uint32_t time)
     case 2:
 		// Changing unit state
         if(unitState == 0)
-        {
             unitState = 1;
-        }
         else if(unitState == 1)
-        {
             unitState = 0;
-        }
 
         delay = 250;
         break;
