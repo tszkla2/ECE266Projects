@@ -54,7 +54,7 @@ static int unitState = 0;		// 0 - mm; 1 - inch
 void rangerUse(uint32_t time)
 {
     uint8_t code[4];
-    uint16_t curNum = rangerGet();
+    uint16_t curNum = 6000;
     uprintf("worked");
 
     double holdNum;

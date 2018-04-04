@@ -77,7 +77,7 @@ rangerGet   	PUSH  	{LR}		; save return address
 				MOV		r2, #RANGER_PIN
 				BL		GPIOPinWrite
 				
-				MOV	r0, #5
+				MOV		r0, #5
 				BL 		waitUs
 				
 				;	--Restore to fall edge
@@ -115,7 +115,7 @@ while_One		LDR 	r0, RANGER_BASE
 				BL		TimerValueGet
 				
 				; 	-Push value to variable
-				MOV 	r3, r0
+				PUSH 	{r0}
 				
 				;	-Clearing any fake interrupts
 				LDR 	r0, RANGER_BASE
@@ -135,7 +135,7 @@ while_Two		LDR 	r0, RANGER_BASE
 				BL 		TimerValueGet
 				
 				; 	-Push value to variable
-				MOV 	r4, r0
+				PUSH 	{r0}
 				
 				;	-Clearing any fake interrupts
 				LDR 	r0, RANGER_BASE
@@ -144,10 +144,11 @@ while_Two		LDR 	r0, RANGER_BASE
 				
 				
 				;	---Calculation
-				SUB		r0, r4, r3
-				UDIV	r1,	#340, #50000
-				MUL		r0, r0, r1
+				POP		{r0, r1}
+				SUB		r0, r1, r0
+				MOV		r1,	#(50000/340)
+				UDIV		r0, r0, r1
 				MOV     r1, #2
 				UDIV	r0,	r0, r1
 
-				POP 	{r0, pc} ; pop final value to r0 and return
+				POP 	{pc} ; pop final value to r0 and return
