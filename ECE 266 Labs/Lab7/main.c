@@ -54,7 +54,9 @@ static int unitState = 0;		// 0 - mm; 1 - inch
 void rangerUse(uint32_t time)
 {
     uint8_t code[4];
-    uint16_t curNum = rangerGet();
+    uint16_t curNum = 6000;
+    uprintf("worked");
+
     double holdNum;
 	if(rangerState == 1){
 	// --- MM value
@@ -93,7 +95,13 @@ void rangerUse(uint32_t time)
 	// --- Inch value
     else if(unitState == 1)
     {
-
+        if(curNum > 9999){
+            digit1 = 9;
+            digit2 = 9;
+            digit3 = 9;
+            digit4 = 9;
+        }
+        else{
         holdNum = curNum;
         holdNum = holdNum / 25.4;
         curNum = (int)holdNum;
@@ -118,6 +126,7 @@ void rangerUse(uint32_t time)
 		if(digit1 >= 0 && digit2 >= 0 && digit3 >= 0 && digit4 == 0)
         {
             digit4 = 10;
+        }
         }
     }
 
@@ -175,7 +184,6 @@ main(void){
 
 
 	uprintf("%s\n\r", "Lab 7: ");
-
 	schdCallback(rangerUse, 1000);
 	schdCallback(checkPushButton, 1005);
 

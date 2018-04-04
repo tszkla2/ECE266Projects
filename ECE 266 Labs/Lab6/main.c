@@ -124,17 +124,20 @@ checkPushButton(uint32_t time)
 
     switch (code) {
     case 1:
+        uprintf("%s\n\r", "1");
         rotaryState = 0;
         delay = 250;
         break;
 
     case 2:
+        uprintf("%s\n\r", "2");
         rotaryState = 1;
         delay = 250;
         break;
 
     default:
         delay = 50;
+        uprintf("%s\n\r", "DEF");
     }
 
     schdCallback(checkPushButton, time + delay);
