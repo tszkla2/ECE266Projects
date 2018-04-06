@@ -8808,3 +8808,22 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.
 !ENTRY com.ti.ccstudio.debug 1 0 2018-04-04 11:42:34.671
 !MESSAGE DS_ERROR: CORTEX_M4_0: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
 
+!SESSION 2018-04-05 15:40:49.391 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 4 0 2018-04-05 15:41:01.949
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2018-04-05 15:41:01.949
+!MESSAGE debugServerDir=C:/ti/ccsv7/ccs_base/DebugServer
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-05 15:43:56.855
+!MESSAGE Indexed 'Lab8' (3 sources, 2 headers) in 0.486 sec: 66 declarations; 252 references; 13 unresolved inclusions; 0 syntax errors; 60 unresolved names (16%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-04-05 15:43:57.742
+!MESSAGE Indexed 'Lab8' (3 sources, 7 headers) in 0.18 sec: 242 declarations; 428 references; 6 unresolved inclusions; 0 syntax errors; 50 unresolved names (6.9%)
