@@ -12,7 +12,6 @@
 #include "pwmBuzzer.h"
 
 static enum {Run, Pause}
-
 sysState = Pause;
 
 /*
@@ -46,6 +45,18 @@ pwmSeg_t pwmTable [] = {
 };
 
 #define	LEGS	(sizeof(pwmTable)/sizeof(pwmTable[0]))
+
+pwm_t intensityBuzzerTable[] = {
+  {191112, 200},
+  {170262, 200},
+  {151686, 200},
+  {143172, 200},
+  {127551, 200},
+  {113636, 200},
+  {101238, 200},
+  {95556, 200},
+  {100, 1}
+};
 
 /*
  * Check the push button. SW1 is the RUN key, SW2 is the PAUSE key
@@ -113,17 +124,23 @@ pwmledUpdate(uint32_t time)
     }
 }
 
+int song {4,3,2,4,5,2}; // put song here
+int counts = 0;
+
 void soundUpdate(uint32_t time)
 {
-    pwmB_t mapAr = {191112.502, 0};
-	int i = 0;
-	int song {4,3,2,4,5,2}; // put song here
+    pwmB_t mapAr;
 	
-	while (i != 21){
-		mapArpwmDutyCycle = song[i];
+	if(sysState = Run){
+		mapAr = intensityBuzzerTable[song[counts]]
 		buzzerOn(mapAr);
+		counts++;
+		schdCallback(soundUpdate, time + 50);
 	}
-	
+	else
+	{
+		schdCallback(soundUpdate, time + 50);
+	}
 	
 	//	-Song in words
     // E D C D E E E D D D E G G E D C D E E E E D D E D C
@@ -136,7 +153,8 @@ void soundUpdate(uint32_t time)
     // A4 (440.000) = (113636.364)
     // B4 (493.883) = (101238.552)
     // C5 (523.251) = (95556.435)
-
+	
+	// Should reach but just in case
     schdCallback(soundUpdate, time + 10);
 }
 
