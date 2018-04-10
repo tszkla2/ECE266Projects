@@ -9,7 +9,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "launchpad.h"
-#include "pwmbuzzer.h"
+#include "pwmBuzzer.h"
 
 static enum {Run, Pause}
 
@@ -120,7 +120,7 @@ void soundUpdate(uint32_t time)
 	int song {4,3,2,4,5,2}; // put song here
 	
 	while (i != 21){
-		mapAr->pwmDutyCycle = song[i];
+		mapArpwmDutyCycle = song[i];
 		buzzerOn(mapAr);
 	}
 	
