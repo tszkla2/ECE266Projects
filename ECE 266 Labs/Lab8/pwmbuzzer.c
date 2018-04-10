@@ -5,7 +5,7 @@
 #include <driverlib/gpio.h>
 #include <driverlib/pin_map.h>
 #include <driverlib/timer.h>
-#include "pwmBuzzer.h"
+#include "pwmbuzzer.h"
 
 // Struct for the input num for mapping
 typedef struct {
@@ -15,7 +15,7 @@ typedef struct {
 
 // Pre-mapped tones {period, dutyCycle}
 pwm_t intensityTable[] = {
-  {200000, 2000}, {150000, 2000}, {100000, 2000}, {50000, 2000} {100, 1}
+  {200000, 2000}, {150000, 2000}, {100000, 2000}, {50000, 2000}, {100, 1}
 };
 
 #define BUZZER_INTENSITY_LEVEL_NUM     (sizeof(intensityTable) / sizeof(pwm_t))
