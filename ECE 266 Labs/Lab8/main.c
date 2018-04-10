@@ -47,20 +47,6 @@ pwmSeg_t pwmTable [] = {
 
 #define	LEGS	(sizeof(pwmTable)/sizeof(pwmTable[0]))
 
-// Pre-mapped tones {period, dutyCycle}
-pwmBuz_t intensityTable[] = {
-  {200000, 2000},
-  {150000, 2000},
-  {100000, 2000},
-  {50000, 2000},
-  {100, 1}
-};
-
-#define BUZZER_INTENSITY_LEVEL_NUM     (sizeof(intensityLevelTable) / sizeof(pwm_t))
-
-
-int song {}; // put song here
-
 /*
  * Check the push button. SW1 is the RUN key, SW2 is the PAUSE key
  */
@@ -131,6 +117,7 @@ void soundUpdate(uint32_t time)
 {
     pwmB_t mapAr = {191112.502, 0};
 	int i = 0;
+	int song {4,3,2,4,5,2}; // put song here
 	
 	while (i != 21){
 		mapAr->pwmDutyCycle = song[i];
@@ -138,6 +125,7 @@ void soundUpdate(uint32_t time)
 	}
 	
 	
+	//	-Song in words
     // E D C D E E E D D D E G G E D C D E E E E D D E D C
     //    FREQUENCY   CLOCK CYCLES
     // C4 (261.626) = (191112.504)
