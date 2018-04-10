@@ -28,7 +28,7 @@ void buzzerInit()
 	TimerEnable(WTIMER0_BASE, TIMER_A);
 }
 
-void buzzerOn(pwm_t type)
+void buzzerOn(pwmB_t type)
 {
 	// Setting sound intensity based on in putted data map
 	TimerLoadSet(WTIMER0_BASE, TIMER_A, type->pwmPeriod);

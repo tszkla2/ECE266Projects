@@ -129,7 +129,7 @@ pwmledUpdate(uint32_t time)
 
 void soundUpdate(uint32_t time)
 {
-    pwm_t mapAr = {191112.502, 0}
+    pwmB_t mapAr = {191112.502, 0};
 	int i = 0;
 	
 	while (i != 21){
