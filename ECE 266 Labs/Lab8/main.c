@@ -8,6 +8,7 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <driverlib/sysctl.h>
 #include "launchpad.h"
 #include "pwmBuzzer.h"
 
@@ -46,15 +47,15 @@ pwmSeg_t pwmTable [] = {
 
 #define	LEGS	(sizeof(pwmTable)/sizeof(pwmTable[0]))
 
-pwm_t intensityBuzzerTable[] = {
-  {191112, 200},
-  {170262, 200},
-  {151686, 200},
-  {143172, 200},
-  {127551, 200},
-  {113636, 200},
-  {101238, 200},
-  {95556, 200},
+pwmB_t intensityBuzzerTable[] = {
+  {191112, 200000},
+  {170262, 200000},
+  {151686, 200000},
+  {143172, 200000},
+  {127552, 200000},
+  {113636, 200000},
+  {101238, 200000},
+  {95556, 200000},
   {100, 1}
 };
 
@@ -74,16 +75,8 @@ checkPushButton(uint32_t time)
 		break;
 
 	case 2:
-        if(sysState == Pause)
-        {
-            sysState = Run;
-            delay = 250;
-        }
-        else if(sysState == Pause)
-        {
-            sysState = Run;
-            delay = 250;
-        }
+	    sysState = Pause;
+	    delay = 250;
 		break;
 
 	default:
@@ -124,18 +117,22 @@ pwmledUpdate(uint32_t time)
     }
 }
 
-int song {4,3,2,4,5,2}; // put song here
+int song[]= {2,1,0,1,2,2,2,1,1,1,2,4,4,2,1,0,1,2,2,2,2,1,1,2,1,0}; // put song here
 int counts = 0;
 
 void soundUpdate(uint32_t time)
 {
     pwmB_t mapAr;
 	
-	if(sysState = Run){
-		mapAr = intensityBuzzerTable[song[counts]]
+	if(sysState == Pause){
+		mapAr = intensityBuzzerTable[song[counts]];
 		buzzerOn(mapAr);
 		counts++;
-		schdCallback(soundUpdate, time + 50);
+		if(counts == 25)
+		{
+		    counts = 0;
+		}
+		schdCallback(soundUpdate, time + 10);
 	}
 	else
 	{
