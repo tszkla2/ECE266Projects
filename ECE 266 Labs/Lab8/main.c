@@ -48,14 +48,14 @@ pwmSeg_t pwmTable [] = {
 #define	LEGS	(sizeof(pwmTable)/sizeof(pwmTable[0]))
 
 pwmB_t intensityBuzzerTable[] = {
-  {191112, 200000},
-  {170262, 200000},
-  {151686, 200000},
-  {143172, 200000},
-  {127552, 200000},
-  {113636, 200000},
-  {101238, 200000},
-  {95556, 200000},
+  {191112, 1100},
+  {170262, 1100},
+  {151686, 1100},
+  {143172, 1100},
+  {127552, 1100},
+  {113636, 1100},
+  {101238, 1100},
+  {95556, 1100},
   {100, 1}
 };
 
@@ -117,7 +117,7 @@ pwmledUpdate(uint32_t time)
     }
 }
 
-int song[]= {2,1,0,1,2,2,2,1,1,1,2,4,4,2,1,0,1,2,2,2,2,1,1,2,1,0}; // put song here
+int song[]= {2,8,1,8,0,8,1,8,2,8,2,8,2,8,1,8,1,8,1,8,2,8,4,8,4,8,2,8,1,8,0,8,1,8,2,8,2,8,2,8,2,8,1,8,1,8,2,8,1,8,0,8,8,8}; // put song here
 int counts = 0;
 
 void soundUpdate(uint32_t time)
@@ -128,15 +128,15 @@ void soundUpdate(uint32_t time)
 		mapAr = intensityBuzzerTable[song[counts]];
 		buzzerOn(mapAr);
 		counts++;
-		if(counts == 25)
+		if(counts == 53)
 		{
 		    counts = 0;
 		}
-		schdCallback(soundUpdate, time + 10);
+		schdCallback(soundUpdate, time + 300);
 	}
 	else
 	{
-		schdCallback(soundUpdate, time + 50);
+		schdCallback(soundUpdate, time + 200);
 	}
 	
 	//	-Song in words
@@ -150,9 +150,6 @@ void soundUpdate(uint32_t time)
     // A4 (440.000) = (113636.364)
     // B4 (493.883) = (101238.552)
     // C5 (523.251) = (95556.435)
-	
-	// Should reach but just in case
-    schdCallback(soundUpdate, time + 10);
 }
 
 void main(void)

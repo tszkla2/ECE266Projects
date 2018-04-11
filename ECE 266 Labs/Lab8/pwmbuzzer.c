@@ -21,8 +21,8 @@ void buzzerInit()
 	TimerConfigure(WTIMER0_BASE, (TIMER_CFG_SPLIT_PAIR | TIMER_CFG_A_PWM));
 
 	// The default setting is very loud, so change it to a quiet version
-	TimerLoadSet(WTIMER0_BASE, TIMER_A, 2000000);
-	TimerMatchSet(WTIMER0_BASE, TIMER_A, 20000000-1);
+	TimerLoadSet(WTIMER0_BASE, TIMER_A, 10);
+	TimerMatchSet(WTIMER0_BASE, TIMER_A, 10-1);
 
 	// Enable the TimerA
 	TimerEnable(WTIMER0_BASE, TIMER_A);
