@@ -9039,3 +9039,234 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.
 
 !ENTRY com.ti.common.core 4 0 2018-04-11 10:54:16.178
 !MESSAGE debugServerDir=C:/ti/ccsv7/ccs_base/DebugServer
+!SESSION 2018-04-11 12:57:13.380 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 4 0 2018-04-11 12:57:22.069
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2018-04-11 12:57:22.069
+!MESSAGE debugServerDir=C:/ti/ccsv7/ccs_base/DebugServer
+
+!ENTRY org.eclipse.debug.core 4 2 2018-04-11 17:09:49.662
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.debug.core".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.getToolChain(Configuration.java:1014)
+	at com.ti.common.project.core.util.CTIProjectCoreUtils.getBuildArtifactLocation(CTIProjectCoreUtils.java:281)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.findBuildArtifactOwner(ProjectCoreUtils.java:172)
+	at com.ti.ccstudio.debug.sourcelookup.CCSProductsSourceContainer.checkProducts(CCSProductsSourceContainer.java:55)
+	at com.ti.ccstudio.debug.sourcelookup.CCSProductsSourceContainer.findSourceElementsFromContext(CCSProductsSourceContainer.java:84)
+	at com.ti.ccstudio.debug.sourcelookup.CPUSpecificContainer.findSourceElementsFromContext(CPUSpecificContainer.java:125)
+	at com.ti.ccstudio.debug.sourcelookup.CCSRelativeSourceLookupParticipant.findSourceElements(CCSRelativeSourceLookupParticipant.java:115)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector$SourceLookupQuery.run(AbstractSourceLookupDirector.java:142)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.doSourceLookup(AbstractSourceLookupDirector.java:505)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.getSourceElement(AbstractSourceLookupDirector.java:785)
+	at com.ti.ccstudio.debug.sourcelookup.CCSSourceLookupDirector.getSourceElement(CCSSourceLookupDirector.java:219)
+	at com.ti.ccstudio.debug.sourcelookup.CCSDsfSourceLookupDirector.getSourceElement(CCSDsfSourceLookupDirector.java:85)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.performLookup(DsfSourceDisplayAdapter.java:203)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.run(DsfSourceDisplayAdapter.java:185)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.core 4 125 2018-04-11 17:09:49.702
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.managedbuilder.internal.core.Configuration.getToolChain(Configuration.java:1014)
+	at com.ti.common.project.core.util.CTIProjectCoreUtils.getBuildArtifactLocation(CTIProjectCoreUtils.java:281)
+	at com.ti.ccstudio.project.core.util.ProjectCoreUtils.findBuildArtifactOwner(ProjectCoreUtils.java:172)
+	at com.ti.ccstudio.debug.sourcelookup.CCSProductsSourceContainer.checkProducts(CCSProductsSourceContainer.java:55)
+	at com.ti.ccstudio.debug.sourcelookup.CCSProductsSourceContainer.findSourceElementsFromContext(CCSProductsSourceContainer.java:84)
+	at com.ti.ccstudio.debug.sourcelookup.CPUSpecificContainer.findSourceElementsFromContext(CPUSpecificContainer.java:125)
+	at com.ti.ccstudio.debug.sourcelookup.CCSRelativeSourceLookupParticipant.findSourceElements(CCSRelativeSourceLookupParticipant.java:115)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector$SourceLookupQuery.run(AbstractSourceLookupDirector.java:142)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.doSourceLookup(AbstractSourceLookupDirector.java:505)
+	at org.eclipse.debug.core.sourcelookup.AbstractSourceLookupDirector.getSourceElement(AbstractSourceLookupDirector.java:785)
+	at com.ti.ccstudio.debug.sourcelookup.CCSSourceLookupDirector.getSourceElement(CCSSourceLookupDirector.java:219)
+	at com.ti.ccstudio.debug.sourcelookup.CCSDsfSourceLookupDirector.getSourceElement(CCSDsfSourceLookupDirector.java:85)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.performLookup(DsfSourceDisplayAdapter.java:203)
+	at org.eclipse.cdt.dsf.debug.ui.sourcelookup.DsfSourceDisplayAdapter$LookupJob.run(DsfSourceDisplayAdapter.java:185)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 17:12:26.418
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 17:14:14.161
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error connecting to the target: Unable to communicate with the device. Please check your connection.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 17:14:14.231
+!MESSAGE DS_ERROR: Error connecting to the target:
+Unable to communicate with the device. Please check your connection.
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 17:14:25.232
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 17:14:25.232
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 17:14:25.242
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 17:14:25.242
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 17:19:03.792
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 17:19:03.792
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 17:22:58.136
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error connecting to the target: Unable to communicate with the device. Please check your connection.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 17:22:58.524
+!MESSAGE DS_ERROR: Error connecting to the target:
+Unable to communicate with the device. Please check your connection.
+!SESSION 2018-04-11 17:35:27.885 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 4 0 2018-04-11 17:35:41.433
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2018-04-11 17:35:41.433
+!MESSAGE debugServerDir=C:/ti/ccsv7/ccs_base/DebugServer
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2018-04-11 17:40:21.991
+!MESSAGE Unable to locate file: C:/Jenkins/workspace/TivaWare-Git-Release/DriverLib/build/DriverLib.test/driverlib/sysctl.c
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2018-04-11 17:40:22.091
+!MESSAGE Unable to locate file: C:/Jenkins/workspace/TivaWare-Git-Release/DriverLib/build/DriverLib.test/driverlib/gpio.c
+
+!ENTRY org.eclipse.cdt.dsf.ui 2 0 2018-04-11 17:40:22.111
+!MESSAGE Unable to locate file: C:/Jenkins/workspace/TivaWare-Git-Release/DriverLib/build/DriverLib.test/driverlib/uart.c
+
+!ENTRY com.ti.ccstudio.debug 4 0 2018-04-11 17:40:23.647
+!MESSAGE Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0 - WARNING: opCode alignment dropped! (Requested address 0x30b7 | aligned address 0x30b8)
+
+!ENTRY com.ti.ccstudio.debug 4 0 2018-04-11 17:40:23.697
+!MESSAGE Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0 - WARNING: opCode alignment dropped! (Requested address 0x30d7 | aligned address 0x30d8)
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:45.281
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:45.281
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:45.691
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:45.691
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:45.701
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:45.711
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:46.174
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:46.174
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:46.184
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:46.184
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:48.345
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:48.345
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:48.345
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:02:48.355
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:03:27.803
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:03:27.803
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:03:27.973
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:03:27.983
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:03:28.134
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:03:28.143
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:06:33.885
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\Tom\Documents\GitHub\LabGroupB7\ECE 266 Labs\Lab7\Debug\Lab7.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:12:27.122
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:12:27.126
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:12:27.131
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:12:27.131
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-11 18:14:29.042
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\Tom\Documents\GitHub\LabGroupB7\ECE 266 Labs\Lab7\Debug\Lab7.out Could not open file
+

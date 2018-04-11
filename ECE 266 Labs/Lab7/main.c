@@ -42,10 +42,10 @@ static uint8_t seg7Coding[11] = {
         0b00000000,         // digit BLANK
 };
 
-uint32_t digit1 = 5;
-uint32_t digit2 = 5;
-uint32_t digit3 = 5;
-uint32_t digit4 = 5;
+uint32_t digit1 = 0;
+uint32_t digit2 = 0;
+uint32_t digit3 = 0;
+uint32_t digit4 = 0;
 uint32_t delay = 50;
 
 static int rangerState = 0;		// 0 - pause; 1 - run
@@ -54,8 +54,10 @@ static int unitState = 0;		// 0 - mm; 1 - inch
 void rangerUse(uint32_t time)
 {
     uint8_t code[4];
-    uint16_t curNum = rangerGet();
-    uprintf("worked");
+    uint32_t temNum = rangerGet();
+    uprintf("Working? %i \n",temNum);
+    uint32_t curNum = (340.0/50000.0)*temNum/2.0;
+    uprintf("Working? %i \n",curNum);
 
     double holdNum;
 	if(rangerState == 1){
@@ -153,7 +155,7 @@ checkPushButton(uint32_t time)
 			rangerState = 1;
 		else if(rangerState == 1)	// off
 			rangerState = 0;
-			
+
         delay = 250;
         break;
 

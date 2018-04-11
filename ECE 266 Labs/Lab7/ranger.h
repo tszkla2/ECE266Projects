@@ -5,6 +5,6 @@
 void rangerInit();
 
 //Function for detecting
-uint16_t rangerGet();
+uint32_t rangerGet();
 
 #endif // RANGER_H_INCLUDED

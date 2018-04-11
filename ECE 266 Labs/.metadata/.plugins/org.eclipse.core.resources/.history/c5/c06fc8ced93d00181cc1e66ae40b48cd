@@ -1,0 +1,46 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+ASM_SRCS += \
+../homework4-asmfunc.asm 
+
+C_SRCS += \
+../homework4-cfunc.c \
+../homework4-main.c 
+
+C_DEPS += \
+./homework4-cfunc.d \
+./homework4-main.d 
+
+OBJS += \
+./homework4-asmfunc.obj \
+./homework4-cfunc.obj \
+./homework4-main.obj 
+
+ASM_DEPS += \
+./homework4-asmfunc.d 
+
+OBJS__QUOTED += \
+"homework4-asmfunc.obj" \
+"homework4-cfunc.obj" \
+"homework4-main.obj" 
+
+C_DEPS__QUOTED += \
+"homework4-cfunc.d" \
+"homework4-main.d" 
+
+ASM_DEPS__QUOTED += \
+"homework4-asmfunc.d" 
+
+ASM_SRCS__QUOTED += \
+"../homework4-asmfunc.asm" 
+
+C_SRCS__QUOTED += \
+"../homework4-cfunc.c" \
+"../homework4-main.c" 
+
+
