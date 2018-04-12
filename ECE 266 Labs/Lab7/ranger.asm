@@ -88,7 +88,7 @@ rangerGet   	PUSH  	{LR}		; save return address
 				
 				
 				;	---Configure time to pin and work accordingly
-				LDR 	r0, RANGER_BASE
+				LDR 	r0, RANGER_PERIPHTW
 				MOV 	r1, #RANGER_PIN
 				BL		GPIOPinTypeTimer
 				
