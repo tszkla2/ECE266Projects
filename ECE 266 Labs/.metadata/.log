@@ -10070,3 +10070,58 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.
 
 !ENTRY com.ti.common.core 4 0 2018-04-19 17:15:37.110
 !MESSAGE debugServerDir=C:/ti/ccsv7/ccs_base/DebugServer
+!SESSION 2018-04-24 10:11:59.788 -----------------------------------------------
+eclipse.buildId=4.6.0.I20160606-1100
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product com.ti.ccstudio.branding.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.ti.ccstudio.branding.product
+
+!ENTRY com.ti.common.core 4 0 2018-04-24 10:12:45.905
+!MESSAGE path=ccs_base/DebugServer
+
+!ENTRY com.ti.common.core 4 0 2018-04-24 10:12:45.905
+!MESSAGE debugServerDir=C:/ti/ccsv7/ccs_base/DebugServer
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-24 10:29:00.421
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Connection with the target was unexpectedly lost.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-24 10:29:00.441
+!MESSAGE DS_ERROR: CORTEX_M4_0: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-24 11:12:54.036
+!MESSAGE DS_ERROR: CORTEX_M4_0: GEL: Encountered a problem loading file: C:\Users\Tom\Documents\GitHub\LabGroupB7\ECE 266 Labs\Lab8_3\Debug\Lab8_3.out Could not open file
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-24 11:13:30.277
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-24 11:13:30.277
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-24 11:13:30.287
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Debug Port error occurred.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-24 11:13:30.287
+!MESSAGE DS_ERROR: CORTEX_M4_0: Trouble Halting Target CPU 
+
+
+!ENTRY com.ti.ccstudio.system.setup.ui 1 0 2018-04-24 11:44:57.898
+!MESSAGE targetCfgPath1=C:/Users/Tom/user/CCSTargetConfigurations
+
+!ENTRY com.ti.ccstudio.system.setup.ui 1 0 2018-04-24 11:44:57.908
+!MESSAGE targetCfgPath2=C:/Users/Tom/ti/CCSTargetConfigurations
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-24 11:47:41.207
+!MESSAGE DS_ERROR: CORTEX_M4_0: Error: Connection with the target was unexpectedly lost.
+
+
+!ENTRY com.ti.ccstudio.debug 1 0 2018-04-24 11:47:41.217
+!MESSAGE DS_ERROR: CORTEX_M4_0: Failed to remove the debug state from the target before disconnecting.  There may still be breakpoint op-codes embedded in program memory.  It is recommended that you reset the emulator before you connect and reload your program before you continue debugging
+
