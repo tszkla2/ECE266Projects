@@ -160,13 +160,13 @@ pwmledUpdate(uint32_t time)
 }
 
 // ---Tracks Definitions:
-	// Call for day songs
-int daySong1[]= {};	// Day Track 1:
-int daySong2[]= {};	// Day Track 2:
-int daySong3[]= {};	// Day Track 3:
-// Call for night songs
-int nightSong1[]= {0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,5,14,5,14,6,14,7,14,7,14,6,14,5,14,6,14,7,14,5,14,3,14,3,14,4,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,0,14,0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,14,14};	// Night Track 1: Mary had a little lamb
-int nightSong2[]= {};	// Night Track 2:
+int daySongs[3][];		// Call for day songs
+int daySongs[0][]= {};	// Day Track 1: 
+int daySongs[1][]= {};	// Day Track 2: 
+int daySongs[2][]= {};	// Day Track 3: 
+int nightSongs[2][];	// Call for night songs
+int nightSongs[0][]= {0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,5,14,5,14,6,14,7,14,7,14,6,14,5,14,6,14,7,14,5,14,3,14,3,14,4,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,0,14,0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,14,14};	// Night Track 1: Mary had a little lamb
+int nightSongs[1][]= {};	// Night Track 2:
 
 void soundUpdate(uint32_t time)
 {
