@@ -140,7 +140,7 @@ int day3track = 0;// !!!CHANGE BASED ON SIZE!!!
 
 // Call for night songs
 int nightSong1[]= {0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,5,14,5,14,6,14,7,14,7,14,6,14,5,14,6,14,7,14,5,14,3,14,3,14,4,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,0,14,0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,14,14};	// Night Track 1: Mary had a little lamb
-int night1track = 0;// !!!CHANGE BASED ON SIZE!!!
+int night1track = strlen();// !!!CHANGE BASED ON SIZE!!!
 
 int nightSong2[]= {};	// Night Track 2:
 int night2track = 0;// !!!CHANGE BASED ON SIZE!!!
@@ -149,7 +149,7 @@ void soundUpdate(uint32_t time)
 {
 	// Setting up for playing songs
 	if(sysStateBuz == 1){
-		if(lightGet >= ){	// If day time		!!! need DATA values !!!
+		if(lightGet >= 1000000){	// If day time		!!! need DATA values !!!
 			if(sysDayTra == 0){
 				buzzerOn(intenBuzzerTabDay[daySong1[count]].pwmPeriod, intenBuzzerTabDay[daySong1[count]].pwmPeriod - intenBuzzerTabDay[daySong1[count]].pwmDutyCycle);
 				counts++;
