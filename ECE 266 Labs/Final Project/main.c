@@ -12,7 +12,6 @@
 #include "light.h"
 
 // --- System status variables
-uint8_t sysStateLed = 0;	// LED Status
 uint8_t sysStateBuz = 0;	// Activates buzzer when 1
 uint8_t sysTimeCur = 0;		// States if it day time (1) or night time (0)
 uint8_t sysNightTra = 0;	// Current music track for night time
@@ -128,66 +127,76 @@ checkPushButton(uint32_t time)
 	schdCallback(checkPushButton, time + delay);
 }
 
-/*
- * Update LED status
- */
-void
-pwmledUpdate(uint32_t time)
-{
-    static enum color_t {RED = 0, GREEN = 1, BLUE = 2} color = RED;     // Current color to display
-    static int seg = 0;                                                 // Current segment of PWM settings
-
-    if (sysStateLed == 1) {
-        // Set up PWM parameters for the three sub-LEDs. Only one LED is lit at a time.
-        pwm_t off = {0, 200};
-        pwm_t red = (color == RED) ? pwmTable[seg].pwm : off;
-        pwm_t green = (color == GREEN) ? pwmTable[seg].pwm : off;
-        pwm_t blue = (color == BLUE) ? pwmTable[seg].pwm : off;
-        pwmledSetColor(red, green, blue);
-
-        // Move to the next segment, switch color on warp-around
-        seg = (seg + 1) % LEGS;
-        if (seg == 0) {
-            color = (enum color_t) ((color + 1) % 3);
-        }
-
-        schdCallback(pwmledUpdate, time + pwmTable[seg].duration);
-    }
-    else {
-        // Check again after 10 ms
-        schdCallback(pwmledUpdate, time + 10);
-    }
-}
-
 // ---Tracks Definitions:
 	// Call for day songs
 int daySong1[]= {};	// Day Track 1:
+int day1track = 0;// !!!CHANGE BASED ON SIZE!!!
+
 int daySong2[]= {};	// Day Track 2:
+int day2track = 0;// !!!CHANGE BASED ON SIZE!!!
+
 int daySong3[]= {};	// Day Track 3:
+int day3track = 0;// !!!CHANGE BASED ON SIZE!!!
+
 // Call for night songs
 int nightSong1[]= {0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,5,14,5,14,6,14,7,14,7,14,6,14,5,14,6,14,7,14,5,14,3,14,3,14,4,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,0,14,0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,14,14};	// Night Track 1: Mary had a little lamb
+int night1track = 0;// !!!CHANGE BASED ON SIZE!!!
+
 int nightSong2[]= {};	// Night Track 2:
+int night2track = 0;// !!!CHANGE BASED ON SIZE!!!
 
 void soundUpdate(uint32_t time)
 {
 	// Setting up for playing songs
 	if(sysStateBuz == 1){
-		if(lightGet >= )	// If day time		!!! need DATA values
-			buzzerOn(intenBuzzerTabDay[daySongs[sysDayTra][count]].pwmPeriod, intenBuzzerTabDay[daySongs[sysDayTra][count]].pwmPeriod - intenBuzzerTabDay[daySongs[sysDayTra][count]].pwmDutyCycle);
-			counts++;
-			if(counts < strlen(daySongs[sysDayTra][]))		// !!! Check count
-			{
-				counts = 0;
+		if(lightGet >= ){	// If day time		!!! need DATA values !!!
+			if(sysDayTra == 0){
+				buzzerOn(intenBuzzerTabDay[daySong1[count]].pwmPeriod, intenBuzzerTabDay[daySong1[count]].pwmPeriod - intenBuzzerTabDay[daySong1[count]].pwmDutyCycle);
+				counts++;
+				if(counts < day1track)		// !!! Check count
+				{
+					counts = 0;
+				}
+				schdCallback(soundUpdate, time + 300);
 			}
-			schdCallback(soundUpdate, time + 300);
-		else{		// If night time
-			buzzerOn(intenBuzzerTabNight[nightSongs[sysNightTra][count]].pwmPeriod, intenBuzzerTabNight[nightSongs[sysNightTra][count]].pwmPeriod - intenBuzzerTabNight[nightSongs[sysNightTra][count]].pwmDutyCycle);
-			counts++;
-			if(counts < strlen(nightSongs[sysNightTra][]))		// !!! Check count
-			{
-				counts = 0;
+			else if(sysDayTra == 1){
+				buzzerOn(intenBuzzerTabDay[daySong2[count]].pwmPeriod, intenBuzzerTabDay[daySong2[count]].pwmPeriod - intenBuzzerTabDay[daySong2[count]].pwmDutyCycle);
+				counts++;
+				if(counts < day2track)		// !!! Check count
+				{
+					counts = 0;
+				}
+				schdCallback(soundUpdate, time + 300);
 			}
-			schdCallback(soundUpdate, time + 300);
+			else{		// If night time
+				buzzerOn(intenBuzzerTabDay[daySong3[count]].pwmPeriod, intenBuzzerTabDay[daySong3[count]].pwmPeriod - intenBuzzerTabDay[daySong3[count]].pwmDutyCycle);
+				counts++;
+				if(counts < day3track)		// !!! Check count
+				{
+					counts = 0;
+				}
+				schdCallback(soundUpdate, time + 300);
+			}
+		}
+		else{
+			if(sysDayTra == 0){
+				buzzerOn(intenBuzzerTabDay[nightSong1[count]].pwmPeriod, intenBuzzerTabDay[nightSong1[count]].pwmPeriod - intenBuzzerTabDay[nightSong1[count]].pwmDutyCycle);
+				counts++;
+				if(counts < night1track)		// !!! Check count
+				{
+					counts = 0;
+				}
+				schdCallback(soundUpdate, time + 300);
+			}
+			else{		// If night time
+				buzzerOn(intenBuzzerTabDay[nightSong2[count]].pwmPeriod, intenBuzzerTabDay[nightSong2[count]].pwmPeriod - intenBuzzerTabDay[nightSong2[count]].pwmDutyCycle);
+				counts++;
+				if(counts < night2track)		// !!! Check count
+				{
+					counts = 0;
+				}
+				schdCallback(soundUpdate, time + 300);
+			}
 		}
 	}
 	else
@@ -211,7 +220,6 @@ void soundUpdate(uint32_t time)
 void main(void)
 {
 	lpInit();
-	pwmledInit();
 	buzzerInit();
 	lightInit();
 
