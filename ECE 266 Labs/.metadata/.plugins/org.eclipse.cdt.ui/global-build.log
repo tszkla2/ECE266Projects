@@ -21604,3 +21604,1513 @@ gmake: *** [light.obj] Error 1
 gmake: Target 'all' not remade because of errors.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+"../main.c", line 139: error #150: variable "song3" has already been initialized
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:30: recipe for target 'main.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../main.c", line 26: error #20: identifier "pwm_t" is undefined
+"../main.c", line 113: error #20: identifier "count" is undefined
+"../main.c", line 119: error #20: identifier "count" is undefined
+"../main.c", line 144: warning #169-D: argument of type "int *" is incompatible with parameter of type "const char *"
+"../main.c", line 144: error #60: function call is not allowed in a constant expression
+"../main.c", line 153: warning #43-D: operand types are incompatible ("uint32_t (*)()" and "int")
+"../main.c", line 153: warning #154-D: conversion of nonzero integer to pointer
+"../main.c", line 155: error #20: identifier "count" is undefined
+"../main.c", line 164: error #20: identifier "count" is undefined
+"../main.c", line 173: error #20: identifier "count" is undefined
+"../main.c", line 184: error #20: identifier "count" is undefined
+"../main.c", line 193: error #20: identifier "count" is undefined
+"../main.c", line 233: error #20: identifier "pwmledUpdate" is undefined
+10 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+'Building file: "../light.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="light.d_raw"  "../light.c"
+3 Assembly Errors, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'light.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../light.c", line 32: warning #121-D: return value type does not match the function type
+"../light.c", line 57: warning #994-D: missing return statement at end of non-void function "lightGet"
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+"C:\Users\Tom\AppData\Local\Temp\{9C472AE4-4DEA-4352-B876-DBC71CB7F7F9}", ERROR!   at line 363: [E0002] Illegal mnemonic specified
+	LDR   r0, ROTARY_PORT
+
+"C:\Users\Tom\AppData\Local\Temp\{9C472AE4-4DEA-4352-B876-DBC71CB7F7F9}", ERROR!   at line 367: [E0001] Undefined symbol
+		BL    ADCSequenceDataGet
+
+"C:\Users\Tom\AppData\Local\Temp\{9C472AE4-4DEA-4352-B876-DBC71CB7F7F9}", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  ADCSequenceDataGet
+
+Errors in Source - Assembler Aborted
+gmake: *** [light.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:30: recipe for target 'main.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../main.c", line 26: error #20: identifier "pwm_t" is undefined
+"../main.c", line 144: warning #169-D: argument of type "int *" is incompatible with parameter of type "const char *"
+"../main.c", line 144: error #60: function call is not allowed in a constant expression
+"../main.c", line 153: warning #43-D: operand types are incompatible ("uint32_t (*)()" and "int")
+"../main.c", line 153: warning #154-D: conversion of nonzero integer to pointer
+"../main.c", line 156: error #20: identifier "counts" is undefined
+"../main.c", line 165: error #20: identifier "counts" is undefined
+"../main.c", line 174: error #20: identifier "counts" is undefined
+"../main.c", line 185: error #20: identifier "counts" is undefined
+"../main.c", line 194: error #20: identifier "counts" is undefined
+"../main.c", line 233: error #20: identifier "pwmledUpdate" is undefined
+8 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+'Building file: "../light.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="light.d_raw"  "../light.c"
+3 Assembly Errors, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'light.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../light.c", line 32: warning #121-D: return value type does not match the function type
+"../light.c", line 57: warning #994-D: missing return statement at end of non-void function "lightGet"
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+"C:\Users\Tom\AppData\Local\Temp\{6A8F2CC0-F55F-4815-817C-96873B73CCB5}", ERROR!   at line 363: [E0002] Illegal mnemonic specified
+	LDR   r0, ROTARY_PORT
+
+"C:\Users\Tom\AppData\Local\Temp\{6A8F2CC0-F55F-4815-817C-96873B73CCB5}", ERROR!   at line 367: [E0001] Undefined symbol
+		BL    ADCSequenceDataGet
+
+"C:\Users\Tom\AppData\Local\Temp\{6A8F2CC0-F55F-4815-817C-96873B73CCB5}", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  ADCSequenceDataGet
+
+Errors in Source - Assembler Aborted
+gmake: *** [light.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:30: recipe for target 'main.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../main.c", line 26: error #20: identifier "pwm_t" is undefined
+"../main.c", line 144: warning #169-D: argument of type "int *" is incompatible with parameter of type "const char *"
+"../main.c", line 144: error #60: function call is not allowed in a constant expression
+"../main.c", line 153: warning #43-D: operand types are incompatible ("uint32_t (*)()" and "int")
+"../main.c", line 153: warning #154-D: conversion of nonzero integer to pointer
+"../main.c", line 155: error #20: identifier "count" is undefined
+"../main.c", line 164: error #20: identifier "count" is undefined
+"../main.c", line 173: error #20: identifier "count" is undefined
+"../main.c", line 184: error #20: identifier "count" is undefined
+"../main.c", line 193: error #20: identifier "count" is undefined
+"../main.c", line 233: error #20: identifier "pwmledUpdate" is undefined
+8 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+'Building file: "../light.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="light.d_raw"  "../light.c"
+3 Assembly Errors, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'light.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../light.c", line 32: warning #121-D: return value type does not match the function type
+"../light.c", line 57: warning #994-D: missing return statement at end of non-void function "lightGet"
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+"C:\Users\Tom\AppData\Local\Temp\{2EE98B27-92DB-4B26-9C0B-6C49B01FC7AC}", ERROR!   at line 363: [E0002] Illegal mnemonic specified
+	LDR   r0, ROTARY_PORT
+
+"C:\Users\Tom\AppData\Local\Temp\{2EE98B27-92DB-4B26-9C0B-6C49B01FC7AC}", ERROR!   at line 367: [E0001] Undefined symbol
+		BL    ADCSequenceDataGet
+
+"C:\Users\Tom\AppData\Local\Temp\{2EE98B27-92DB-4B26-9C0B-6C49B01FC7AC}", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  ADCSequenceDataGet
+
+Errors in Source - Assembler Aborted
+gmake: *** [light.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:30: recipe for target 'main.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../main.c", line 26: error #20: identifier "pwm_t" is undefined
+"../main.c", line 144: warning #169-D: argument of type "int *" is incompatible with parameter of type "const char *"
+"../main.c", line 144: error #60: function call is not allowed in a constant expression
+"../main.c", line 153: warning #43-D: operand types are incompatible ("uint32_t (*)()" and "int")
+"../main.c", line 153: warning #154-D: conversion of nonzero integer to pointer
+"../main.c", line 233: error #20: identifier "pwmledUpdate" is undefined
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+'Building file: "../light.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="light.d_raw"  "../light.c"
+3 Assembly Errors, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'light.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../light.c", line 32: warning #121-D: return value type does not match the function type
+"../light.c", line 57: warning #994-D: missing return statement at end of non-void function "lightGet"
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+"C:\Users\Tom\AppData\Local\Temp\{CCF20CC0-DD28-4D4A-A6FE-86EA5F65AD89}", ERROR!   at line 363: [E0002] Illegal mnemonic specified
+	LDR   r0, ROTARY_PORT
+
+"C:\Users\Tom\AppData\Local\Temp\{CCF20CC0-DD28-4D4A-A6FE-86EA5F65AD89}", ERROR!   at line 367: [E0001] Undefined symbol
+		BL    ADCSequenceDataGet
+
+"C:\Users\Tom\AppData\Local\Temp\{CCF20CC0-DD28-4D4A-A6FE-86EA5F65AD89}", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  ADCSequenceDataGet
+
+Errors in Source - Assembler Aborted
+gmake: *** [light.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:30: recipe for target 'main.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../main.c", line 23: error #20: identifier "pwmSeg_t" is undefined
+"../main.c", line 137: warning #169-D: argument of type "int *" is incompatible with parameter of type "const char *"
+"../main.c", line 137: error #60: function call is not allowed in a constant expression
+"../main.c", line 146: warning #43-D: operand types are incompatible ("uint32_t (*)()" and "int")
+"../main.c", line 146: warning #154-D: conversion of nonzero integer to pointer
+"../main.c", line 226: error #20: identifier "pwmledUpdate" is undefined
+3 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+'Building file: "../light.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="light.d_raw"  "../light.c"
+3 Assembly Errors, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'light.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../light.c", line 32: warning #121-D: return value type does not match the function type
+"../light.c", line 57: warning #994-D: missing return statement at end of non-void function "lightGet"
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+"C:\Users\Tom\AppData\Local\Temp\{BE5FC7C6-64B8-4E2F-8C1B-3F6D3A4E512C}", ERROR!   at line 363: [E0002] Illegal mnemonic specified
+	LDR   r0, ROTARY_PORT
+
+"C:\Users\Tom\AppData\Local\Temp\{BE5FC7C6-64B8-4E2F-8C1B-3F6D3A4E512C}", ERROR!   at line 367: [E0001] Undefined symbol
+		BL    ADCSequenceDataGet
+
+"C:\Users\Tom\AppData\Local\Temp\{BE5FC7C6-64B8-4E2F-8C1B-3F6D3A4E512C}", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  ADCSequenceDataGet
+
+Errors in Source - Assembler Aborted
+gmake: *** [light.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:30: recipe for target 'main.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../main.c", line 23: error #20: identifier "pwmSeg_t" is undefined
+"../main.c", line 137: warning #169-D: argument of type "int *" is incompatible with parameter of type "const char *"
+"../main.c", line 137: error #60: function call is not allowed in a constant expression
+"../main.c", line 146: warning #43-D: operand types are incompatible ("uint32_t (*)()" and "int")
+"../main.c", line 146: warning #154-D: conversion of nonzero integer to pointer
+2 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+'Building file: "../light.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="light.d_raw"  "../light.c"
+3 Assembly Errors, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'light.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../light.c", line 32: warning #121-D: return value type does not match the function type
+"../light.c", line 57: warning #994-D: missing return statement at end of non-void function "lightGet"
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+"C:\Users\Tom\AppData\Local\Temp\{EBAC9F6D-274D-4F71-A589-053AE8CDABE5}", ERROR!   at line 363: [E0002] Illegal mnemonic specified
+	LDR   r0, ROTARY_PORT
+
+"C:\Users\Tom\AppData\Local\Temp\{EBAC9F6D-274D-4F71-A589-053AE8CDABE5}", ERROR!   at line 367: [E0001] Undefined symbol
+		BL    ADCSequenceDataGet
+
+"C:\Users\Tom\AppData\Local\Temp\{EBAC9F6D-274D-4F71-A589-053AE8CDABE5}", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  ADCSequenceDataGet
+
+Errors in Source - Assembler Aborted
+gmake: *** [light.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../light.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="light.d_raw"  "../light.c"
+3 Assembly Errors, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'light.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../light.c", line 32: warning #121-D: return value type does not match the function type
+"../light.c", line 57: warning #994-D: missing return statement at end of non-void function "lightGet"
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+warning: "../light.c", line 51: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+"C:\Users\Tom\AppData\Local\Temp\{A187DD1A-602F-4B2B-B71B-30751303A4F5}", ERROR!   at line 363: [E0002] Illegal mnemonic specified
+	LDR   r0, ROTARY_PORT
+
+"C:\Users\Tom\AppData\Local\Temp\{A187DD1A-602F-4B2B-B71B-30751303A4F5}", ERROR!   at line 367: [E0001] Undefined symbol
+		BL    ADCSequenceDataGet
+
+"C:\Users\Tom\AppData\Local\Temp\{A187DD1A-602F-4B2B-B71B-30751303A4F5}", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  ADCSequenceDataGet
+
+Errors in Source - Assembler Aborted
+gmake: *** [light.obj] Error 1
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../main.c", line 121: warning #43-D: operand types are incompatible ("uint32_t (*)()" and "int")
+"../main.c", line 121: warning #154-D: conversion of nonzero integer to pointer
+'Finished building: "../main.c"'
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../light.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="light.d_raw"  "../light.c"
+3 Assembly Errors, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'light.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../light.c", line 54: warning #994-D: missing return statement at end of non-void function "lightGet"
+warning: "../light.c", line 48: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+warning: "../light.c", line 48: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+"C:\Users\Tom\AppData\Local\Temp\{C97246EA-2CF7-43DA-ABC9-F9AA6A6DAFFC}", ERROR!   at line 362: [E0002] Illegal mnemonic specified
+	LDR   r0, ROTARY_PORT
+
+"C:\Users\Tom\AppData\Local\Temp\{C97246EA-2CF7-43DA-ABC9-F9AA6A6DAFFC}", ERROR!   at line 366: [E0001] Undefined symbol
+		BL    ADCSequenceDataGet
+
+"C:\Users\Tom\AppData\Local\Temp\{C97246EA-2CF7-43DA-ABC9-F9AA6A6DAFFC}", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  ADCSequenceDataGet
+
+Errors in Source - Assembler Aborted
+gmake: *** [light.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../light.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="light.d_raw"  "../light.c"
+3 Assembly Errors, No Assembly Warnings
+
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'light.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../light.c", line 54: warning #994-D: missing return statement at end of non-void function "lightGet"
+warning: "../light.c", line 48: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+warning: "../light.c", line 48: Assembly statement "LDR   r0, ROTARY_PORT
+   MOV   r1, #0
+   SUB   SP, #4
+   MOV   r2, sp
+   BL    ADCSequenceDataGet
+   POP {r0, pc}
+   " creates a label, which may not be what was intended. Use a colon after a label or a space before a non-label to silence the warning.
+"C:\Users\Tom\AppData\Local\Temp\{1EC983CA-E1DB-46E9-B45C-FDF5F6266CF5}", ERROR!   at line 362: [E0002] Illegal mnemonic specified
+	LDR   r0, ROTARY_PORT
+
+"C:\Users\Tom\AppData\Local\Temp\{1EC983CA-E1DB-46E9-B45C-FDF5F6266CF5}", ERROR!   at line 366: [E0001] Undefined symbol
+		BL    ADCSequenceDataGet
+
+"C:\Users\Tom\AppData\Local\Temp\{1EC983CA-E1DB-46E9-B45C-FDF5F6266CF5}", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  ADCSequenceDataGet
+
+Errors in Source - Assembler Aborted
+gmake: *** [light.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../light.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="light.d_raw"  "../light.c"
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../light.c", line 27: warning #121-D: return value type does not match the function type
+"../light.c", line 47: warning #1-D: last line of file ends without a newline
+'Finished building: "../light.c"'
+ 
+'Building target: "Final Project.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Final Project.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Final Project_linkInfo.xml" --rom_model -o "Final Project.out" "./buzzer.obj" "./display.obj" "./light.obj" "./main.obj" "./motion.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Final Project.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../light.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="light.d_raw"  "../light.c"
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+'Finished building: "../light.c"'
+ 
+'Building target: "Final Project.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Final Project.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Final Project_linkInfo.xml" --rom_model -o "Final Project.out" "./buzzer.obj" "./display.obj" "./light.obj" "./main.obj" "./motion.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Final Project.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+'Finished building: "../main.c"'
+ 
+'Building target: "Final Project.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Final Project.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Final Project_linkInfo.xml" --rom_model -o "Final Project.out" "./buzzer.obj" "./display.obj" "./light.obj" "./main.obj" "./motion.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Final Project.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+'Finished building: "../main.c"'
+ 
+'Building target: "Final Project.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Final Project.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Final Project_linkInfo.xml" --rom_model -o "Final Project.out" "./buzzer.obj" "./display.obj" "./light.obj" "./main.obj" "./motion.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Final Project.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+'Finished building: "../main.c"'
+ 
+'Building target: "Final Project.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Final Project.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Final Project_linkInfo.xml" --rom_model -o "Final Project.out" "./buzzer.obj" "./display.obj" "./light.obj" "./main.obj" "./motion.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Final Project.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Final Project.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Final Project.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Final Project.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+'Finished building: "../main.c"'
+ 
+'Building target: "Final Project.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Final Project.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Final Project_linkInfo.xml" --rom_model -o "Final Project.out" "./buzzer.obj" "./display.obj" "./light.obj" "./main.obj" "./motion.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Final Project.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Final Project.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:30: recipe for target 'main.obj' failed
+"../main.c", line 7: fatal error #1965: cannot open source file "pwmled.h"
+1 catastrophic error detected in the compilation of "../main.c".
+Compilation terminated.
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:30: recipe for target 'main.obj' failed
+"../main.c", line 12: fatal error #1965: cannot open source file "pwmBuzzer.h"
+1 catastrophic error detected in the compilation of "../main.c".
+Compilation terminated.
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:30: recipe for target 'main.obj' failed
+"../main.c", line 23: error #20: identifier "pwm_t" is undefined
+"../main.c", line 114: error #20: identifier "pwm_t" is undefined
+"../main.c", line 115: error #20: identifier "pwm_t" is undefined
+"../main.c", line 116: error #20: identifier "pwm_t" is undefined
+"../main.c", line 117: error #20: identifier "pwm_t" is undefined
+"../main.c", line 118: warning #225-D: function "pwmledSetColor" declared implicitly
+"../main.c", line 179: warning #225-D: function "pwmledInit" declared implicitly
+5 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:30: recipe for target 'main.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../main.c", line 24: error #20: identifier "pwm_t" is undefined
+"../main.c", line 115: error #20: identifier "pwm_t" is undefined
+"../main.c", line 116: error #20: identifier "pwm_t" is undefined
+"../main.c", line 117: error #20: identifier "pwm_t" is undefined
+"../main.c", line 118: error #20: identifier "pwm_t" is undefined
+"../main.c", line 119: warning #225-D: function "pwmledSetColor" declared implicitly
+"../main.c", line 180: warning #225-D: function "pwmledInit" declared implicitly
+5 errors detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:30: recipe for target 'main.obj' failed
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../main.c", line 120: warning #225-D: function "pwmledInit" declared implicitly
+"../main.c", line 129: error #20: identifier "pwmledUpdate" is undefined
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+"../main.c", line 120: warning #225-D: function "pwmledInit" declared implicitly
+'Finished building: "../main.c"'
+ 
+'Building target: "Final Project.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Final Project.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Final Project_linkInfo.xml" --rom_model -o "Final Project.out" "./buzzer.obj" "./display.obj" "./light.obj" "./main.obj" "./motion.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+
+ undefined  first referenced
+  symbol        in file     
+ ---------  ----------------
+ pwmledInit ./main.obj      
+
+error #10234-D: unresolved symbols remain
+error #10010: errors encountered during linking; "Final Project.out" not built
+
+>> Compilation failure
+makefile:148: recipe for target 'Final Project.out' failed
+gmake[1]: *** [Final Project.out] Error 1
+makefile:144: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+'Finished building: "../main.c"'
+ 
+'Building target: "Final Project.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Final Project.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Final Project_linkInfo.xml" --rom_model -o "Final Project.out" "./buzzer.obj" "./display.obj" "./light.obj" "./main.obj" "./motion.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Final Project.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Final Project.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"..\light.h", line 14: warning #1-D: last line of file ends without a newline
+'Finished building: "../main.c"'
+ 
+'Building target: "Final Project.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Final Project.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Final Project_linkInfo.xml" --rom_model -o "Final Project.out" "./buzzer.obj" "./display.obj" "./light.obj" "./main.obj" "./motion.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+'Finished building target: "Final Project.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Final Project.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Final Project.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'main.obj' failed
+"../main.c", line 7: fatal error #1965: cannot open source file "pwmled.h"
+1 catastrophic error detected in the compilation of "../main.c".
+Compilation terminated.
+gmake: *** [main.obj] Error 1
+'Building file: "../pwmBuzzer.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pwmBuzzer.d_raw"  "../pwmBuzzer.asm"
+9 Assembly Errors, 1 Assembly Warning
+
+>> Compilation failure
+subdir_rules.mk:37: recipe for target 'pwmBuzzer.obj' failed
+"../pwmBuzzer.asm", line 6: fatal error #1965: cannot open source file "buzzer.h"
+Compilation terminated.
+"../pwmBuzzer.asm", WARNING! at line 6: [E1000] error while processing C code in .cdecls directive
+	 .cdecls "stdint.h", "stdbool.h", "stdio.h", "inc/hw_memmap.h", "driverlib/pin_map.h", "driverlib/gpio.h", "driverlib/sysctl.h", "launchpad.h", "buzzer.h", "motion.h"
+
+"../pwmBuzzer.asm", ERROR!   at line 28: [E0001] Undefined symbol
+	                BL    SysCtlPeripheralEnable
+
+"../pwmBuzzer.asm", ERROR!   at line 33: [E0001] Undefined symbol
+	                MOV   r1, #BUZZER_PIN
+
+"../pwmBuzzer.asm", ERROR!   at line 34: [E0001] Undefined symbol
+	                BL    GPIOPinTypeGPIOOutput
+
+"../pwmBuzzer.asm", ERROR!   at line 46: [E0001] Undefined symbol
+	                MOV   r1, #BUZZER_PIN
+
+"../pwmBuzzer.asm", ERROR!   at line 47: [E0001] Undefined symbol
+	                MOV   r2, #BUZZER_PIN
+
+"../pwmBuzzer.asm", ERROR!   at line 48: [E0001] Undefined symbol
+	                BL    GPIOPinWrite
+
+"../pwmBuzzer.asm", ERROR!   at line 60: [E0001] Undefined symbol
+	                MOV   r1, #BUZZER_PIN	; what pin to write (pin mask value)
+
+"../pwmBuzzer.asm", ERROR!   at line 62: [E0001] Undefined symbol
+	                BL    GPIOPinWrite      ; call GPIOPinWrite
+
+"../pwmBuzzer.asm", ERROR!   at EOF: [E0300] The following symbols are undefined:
+  SYSCTL_PERIPH_GPIOC
+  GPIO_PORTC_BASE
+  SysCtlPeripheralEnable
+  GPIO_PIN_4
+  GPIOPinTypeGPIOOutput
+  GPIOPinWrite
+
+Errors in Source - Assembler Aborted
+gmake: *** [pwmBuzzer.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:23: recipe for target 'main.obj' failed
+"../main.c", line 7: fatal error #1965: cannot open source file "pwmled.h"
+1 catastrophic error detected in the compilation of "../main.c".
+Compilation terminated.
+gmake: *** [main.obj] Error 1
+'Building file: "../pwmBuzzer.asm"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pwmBuzzer.d_raw"  "../pwmBuzzer.asm"
+'Finished building: "../pwmBuzzer.asm"'
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Final Project ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../pwmled.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Final Project" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="pwmled.d_raw"  "../pwmled.c"
+subdir_rules.mk:23: warning: overriding recipe for target 'pwmBuzzer.obj'
+subdir_rules.mk:16: warning: ignoring old recipe for target 'pwmBuzzer.obj'
+subdir_rules.mk:37: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:30: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../pwmled.c"'
+ 
+'Building target: "Final Project.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Final Project.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Final Project_linkInfo.xml" --rom_model -o "Final Project.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:23: warning: overriding recipe for target 'pwmBuzzer.obj'
+subdir_rules.mk:16: warning: ignoring old recipe for target 'pwmBuzzer.obj'
+subdir_rules.mk:37: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:30: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Final Project.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'Lab8_3.out' is up to date.
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+"../main.c", line 90: error #20: identifier "counts" is undefined
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+"../main.c", line 180: error #128: expected a statement
+"../main.c", line 202: warning #12-D: parsing restarts here after previous syntax error
+1 error detected in the compilation of "../main.c".
+gmake: *** [main.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Lab8_3 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+'Building file: "../main.c"'
+'Invoking: ARM Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Lab8_3" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building: "../main.c"'
+ 
+'Building target: "Lab8_3.out"'
+'Invoking: ARM Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Lab8_3.map" --heap_size=1024 --stack_size=2048 -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.6.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Lab8_3_linkInfo.xml" --rom_model -o "Lab8_3.out" "./main.obj" "./pwmBuzzer.obj" "./pwmled.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd"  -llibc.a -l"C:/ti/TivaWare_C_Series-2.1.4.178/driverlib/ccs/Debug/driverlib.lib" -l"C:/Users/Tom/Documents/GitHub/LabGroupB7/ECE 266 Labs/Util/Debug/Util.lib" 
+<Linking>
+subdir_rules.mk:30: warning: overriding recipe for target 'pwmled.obj'
+subdir_rules.mk:23: warning: ignoring old recipe for target 'pwmled.obj'
+'Finished building target: "Lab8_3.out"'
+ 
+
+**** Build Finished ****

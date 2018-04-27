@@ -16,6 +16,9 @@
 //sysState = Pause;
 uint8_t sysStateLed;
 uint8_t sysStateBuz;
+uint8_t currSong = 0;
+uint8_t sysStateDay = 0;    // 0 = night and 1 = day
+int counts = 0;
 
 /*
  * PWM table for gradual changes.
@@ -51,20 +54,20 @@ pwmSeg_t pwmTable [] = {
 
 pwmB_t intensityBuzzerTable[] = {
 
-  {227272, 1000}, // A3 - 0
-  {202478, 1000}, // B3 - 1
-  {191112, 1000}, // C4 - 2
-  {170264, 1000}, // D4 - 3
-  {151685, 1000}, // E4 - 4
-  {143172, 1000}, // F4 - 5
-  {127552, 1000}, // G4 - 6
-  {113636, 1000}, // A4 - 7
-  {101238, 1000}, // B4 - 8
-  {95556, 1000},  // C5 - 9
-  {85131, 1000},  // D5 - 10
-  {75843, 1000},  // E5 - 11
-  {71586, 1000},  // F5 - 12
-  {63776, 1000},  // G5 - 13
+  {227272, 15000}, // A3 - 0
+  {202478, 15000}, // B3 - 1
+  {191112, 15000}, // C4 - 2
+  {170264, 15000}, // D4 - 3
+  {151685, 15000}, // E4 - 4
+  {143172, 15000}, // F4 - 5
+  {127552, 15000}, // G4 - 6
+  {113636, 15000}, // A4 - 7
+  {101238, 15000}, // B4 - 8
+  {95556, 15000},  // C5 - 9
+  {85131, 15000},  // D5 - 10
+  {75843, 15000},  // E5 - 11
+  {71586, 15000},  // F5 - 12
+  {63776, 15000},  // G5 - 13
   {100, 1}        // Blank - 14
 };
 
@@ -83,14 +86,22 @@ checkPushButton(uint32_t time)
 	        sysStateLed = 1;
 	    else if(sysStateLed == 1)
 	        sysStateLed = 0;
+	    currSong++;
+	    if(currSong == 2){
+	        currSong = 0;
+	        counts = 0;
+	 	}
+	    buzzerOn(intensityBuzzerTable[14].pwmPeriod, intensityBuzzerTable[14].pwmPeriod - intensityBuzzerTable[14].pwmDutyCycle);
 		delay = 250;
 		break;
 
 	case 2:
 	    if(sysStateBuz == 0)
 	        sysStateBuz = 1;
-	    else if(sysStateBuz == 1)
+	    else if(sysStateBuz == 1){
 	        sysStateBuz = 0;
+            buzzerOn(intensityBuzzerTable[14].pwmPeriod, intensityBuzzerTable[14].pwmPeriod - intensityBuzzerTable[14].pwmDutyCycle);
+	    }
 	    delay = 250;
 		break;
 
@@ -133,20 +144,62 @@ pwmledUpdate(uint32_t time)
 }
 
 int song[]= {4,14,3,14,2,14,3,14,4,14,4,14,4,14,3,14,3,14,3,14,4,14,6,14,6,14,4,14,3,14,2,14,3,14,4,14,4,14,4,14,4,14,3,14,3,14,4,14,3,14,2,14,14,14}; // put song here
-int counts = 0;
 int song2[]= {0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,5,14,5,14,6,14,7,14,7,14,6,14,5,14,6,14,7,14,5,14,3,14,3,14,4,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,0,14,0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,14,14};
 int song3[]= {3,14,6,14,6,14,3,14,3,14,4,14,4,14,3,14,3,14,6,14,6,14,7,14,7,14,8,14,6,14,8,14,8,14,9,14,9,14,9,14,7,14,7,14,8,14,8,14,8,14,6,14,6,14,7,14,7,14,7,14,6,14,5,14,3,14,4,14,5,14,6,14,6,14,14,14};
+int song4[]= {3,14,3,14,5,14,5,14,4,14,5,14,4,14,3,14,5,14,5,14,7,14,7,14,6,14,7,14,6,14,5,14,8,14,8,14,8,14,7,14,7,14,7,14,8,14,8,14,8,14,7,14,6,14,6,14,6,14,5,14,5,14,5,14,4,14,5,14,4,14,3,14,14,14};
+int song5[]= {1,14,3,14,8,14,7,14,6,14,1,14,3,14,6,14,5,14,2,14,3,14,9,14,6,14,7,14,7,14,6,14,4,14,3,14,1,14,3,14,8,14,7,14,6,14,1,14,3,14,6,14,5,14,2,14,6,14,9,14,8,14,6,14,7,14,4,14,5,14,6,14,14,14};
 void soundUpdate(uint32_t time)
 {
 	
 	if(sysStateBuz == 1){
-		buzzerOn(intensityBuzzerTable[song3[counts]].pwmPeriod, intensityBuzzerTable[song3[counts]].pwmPeriod - intensityBuzzerTable[song3[counts]].pwmDutyCycle);
-		counts++;
-		if(counts == 75)
-		{
-		    counts = 0;
-		}
-		schdCallback(soundUpdate, time + 300);
+	 if(sysStateDay == 1){   // Day time
+	    if(currSong == 0){
+	        buzzerOn(intensityBuzzerTable[song[counts]].pwmPeriod, intensityBuzzerTable[song[counts]].pwmPeriod - intensityBuzzerTable[song[counts]].pwmDutyCycle);
+	        counts++;
+	        if(counts == 75)
+	        {
+	            counts = 0;
+	        }
+	        schdCallback(soundUpdate, time + 300);
+	    }
+	    else if(currSong == 1){
+	        buzzerOn(intensityBuzzerTable[song2[counts]].pwmPeriod, intensityBuzzerTable[song2[counts]].pwmPeriod - intensityBuzzerTable[song2[counts]].pwmDutyCycle);
+	        counts++;
+	        if(counts == 75)
+	        {
+	            counts = 0;
+	        }
+	        schdCallback(soundUpdate, time + 300);
+	    }
+	    else
+	    {
+	        schdCallback(soundUpdate, time + 200);
+	    }
+	  }
+	  else{   // Day time
+	    if(currSong == 0){
+	        buzzerOn(intensityBuzzerTable[song3[counts]].pwmPeriod, intensityBuzzerTable[song3[counts]].pwmPeriod - intensityBuzzerTable[song3[counts]].pwmDutyCycle);
+	        counts++;
+	        if(counts == 75)
+	        {
+	            counts = 0;
+	        }
+	        schdCallback(soundUpdate, time + 300);
+	    }
+	    else if(currSong == 1){
+	        buzzerOn(intensityBuzzerTable[song4[counts]].pwmPeriod, intensityBuzzerTable[song4[counts]].pwmPeriod - intensityBuzzerTable[song4[counts]].pwmDutyCycle);
+	        counts++;
+	        if(counts == 75)
+	        {
+	            counts = 0;
+	        }
+	        schdCallback(soundUpdate, time + 300);
+	    }
+	    else
+	    {
+            schdCallback(soundUpdate, time + 200);
+	    }
+	  }
 	}
 	else
 	{

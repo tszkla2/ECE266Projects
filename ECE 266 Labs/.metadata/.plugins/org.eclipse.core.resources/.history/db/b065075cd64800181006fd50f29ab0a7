@@ -1,0 +1,207 @@
+/*
+ * main.c for Final Project, spring 2018
+ *
+ */
+
+#include <stdint.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <driverlib/sysctl.h>
+#include "launchpad.h"
+#include "buzzer.h"
+#include "light.h"
+#include <string.h>
+
+// --- System status variables
+uint8_t sysStateBuz = 0;	// Activates buzzer when 1
+uint8_t sysTimeCur = 0;		// States if it day time (1) or night time (0)
+uint8_t sysNightTra = 0;	// Current music track for night time
+uint8_t sysDayTra = 0;		// Current music track for day time
+int counts = 0;			// Reference for song location in song
+
+pwmB_t intenBuzzerTabDay[] = {
+{27272, 2000}, // A3 - 0
+{202478, 2000}, // B3 - 1
+{191112, 2000}, // C4 - 2
+{170262, 2000}, // D4 - 3
+{151686, 2000}, // E4 - 4
+{143172, 2000}, // F4 - 5
+{127552, 2000}, // G4 - 6
+{113636, 2000}, // A4 - 7
+{101238, 2000}, // B4 - 8
+{95556, 2000},  // C5 - 9
+{85131, 2000},  // D5 - 10
+{75843, 2000},  // E5 - 11
+{71586, 2000},  // F5 - 12
+{63776, 2000},  // G5 - 13
+{100, 1}        // Blank - 14
+};
+
+pwmB_t intenBuzzerTabNight[] = {
+{27272, 1000}, // A3 - 0
+{202478, 1000}, // B3 - 1
+{191112, 1000}, // C4 - 2
+{170262, 1000}, // D4 - 3
+{151686, 1000}, // E4 - 4
+{143172, 1000}, // F4 - 5
+{127552, 1000}, // G4 - 6
+{113636, 1000}, // A4 - 7
+{101238, 1000}, // B4 - 8
+{95556, 1000},  // C5 - 9
+{85131, 1000},  // D5 - 10
+{75843, 1000},  // E5 - 11
+{71586, 1000},  // F5 - 12
+{63776, 1000},  // G5 - 13
+{100, 1}        // Blank - 14
+};
+
+/*
+ * Check the push button. SW1 is the RUN key, SW2 is the PAUSE key
+ */
+void
+checkPushButton(uint32_t time)
+{
+	int code = pbRead();
+	uint32_t delay;
+
+	switch (code) {
+	case 1:		// On and off music
+	    if(sysStateBuz == 0)
+	        sysStateBuz = 1;
+	    else if(sysStateBuz == 1)
+	        sysStateBuz = 0;
+	    delay = 250;
+		break;
+
+	case 2:		// Change Track
+	    if(sysTimeCur == 1){ 	// Day time
+			sysDayTra++;
+			if(sysDayTra > 2)
+				sysDayTra = 0;
+			counts = 0;
+		}
+		else{		// Night time
+			sysNightTra++;
+			if(sysNightTra > 1)
+				sysNightTra = 0;
+			counts = 0;
+		}
+	    delay = 250;
+		break;
+
+	default:
+		delay = 10;
+	}
+
+	schdCallback(checkPushButton, time + delay);
+}
+
+// ---Tracks Definitions:
+	// Call for day songs
+int daySong1[]= {};	// Day Track 1:
+int day1track = 0;// !!!CHANGE BASED ON SIZE!!!
+
+int daySong2[]= {};	// Day Track 2:
+int day2track = 0;// !!!CHANGE BASED ON SIZE!!!
+
+int daySong3[]= {};	// Day Track 3:
+int day3track = 0;// !!!CHANGE BASED ON SIZE!!!
+
+// Call for night songs
+int nightSong1[]= {0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,5,14,5,14,6,14,7,14,7,14,6,14,5,14,6,14,7,14,5,14,3,14,3,14,4,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,0,14,0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,14,14};	// Night Track 1: Mary had a little lamb
+int night1track = 0;// !!!CHANGE BASED ON SIZE!!!
+
+int nightSong2[]= {};	// Night Track 2:
+int night2track = 0;// !!!CHANGE BASED ON SIZE!!!
+
+void soundUpdate(uint32_t time)
+{
+	// Setting up for playing songs
+	if(sysStateBuz == 1){
+		if(false){	// If day time		!!! need DATA values !!!
+			if(sysDayTra == 0){
+				buzzerOn(intenBuzzerTabDay[daySong1[counts]].pwmPeriod, intenBuzzerTabDay[daySong1[counts]].pwmPeriod - intenBuzzerTabDay[daySong1[counts]].pwmDutyCycle);
+				counts++;
+				if(counts < day1track)		// !!! Check count
+				{
+					counts = 0;
+				}
+				schdCallback(soundUpdate, time + 300);
+			}
+			else if(sysDayTra == 1){
+				buzzerOn(intenBuzzerTabDay[daySong2[counts]].pwmPeriod, intenBuzzerTabDay[daySong2[counts]].pwmPeriod - intenBuzzerTabDay[daySong2[counts]].pwmDutyCycle);
+				counts++;
+				if(counts < day2track)		// !!! Check count
+				{
+					counts = 0;
+				}
+				schdCallback(soundUpdate, time + 300);
+			}
+			else{		// If night time
+				buzzerOn(intenBuzzerTabDay[daySong3[counts]].pwmPeriod, intenBuzzerTabDay[daySong3[counts]].pwmPeriod - intenBuzzerTabDay[daySong3[counts]].pwmDutyCycle);
+				counts++;
+				if(counts < day3track)		// !!! Check count
+				{
+					counts = 0;
+				}
+				schdCallback(soundUpdate, time + 300);
+			}
+		}
+		else{
+			if(sysDayTra == 0){
+				buzzerOn(intenBuzzerTabDay[nightSong1[counts]].pwmPeriod, intenBuzzerTabDay[nightSong1[counts]].pwmPeriod - intenBuzzerTabDay[nightSong1[counts]].pwmDutyCycle);
+				counts++;
+				if(counts < night1track)		// !!! Check count
+				{
+					counts = 0;
+				}
+				schdCallback(soundUpdate, time + 300);
+			}
+			else{		// If night time
+				buzzerOn(intenBuzzerTabDay[nightSong2[counts]].pwmPeriod, intenBuzzerTabDay[nightSong2[counts]].pwmPeriod - intenBuzzerTabDay[nightSong2[counts]].pwmDutyCycle);
+				counts++;
+				if(counts < night2track)		// !!! Check count
+				{
+					counts = 0;
+				}
+				schdCallback(soundUpdate, time + 300);
+			}
+		}
+	}
+	else
+	{
+		schdCallback(soundUpdate, time + 200);
+	}
+	
+	//	--Song conversion table
+    // E D C D E E E D D D E G G E D C D E E E E D D E D C
+    //    FREQUENCY   CLOCK CYCLES
+    // C4 (261.626) = (191112.504)
+    // D4 (293.665) = (170262.033)
+    // E4 (329.628) = (151686.143)
+    // F4 (349.228) = (143172.941)
+    // G4 (391.995) = (143172.941)
+    // A4 (440.000) = (113636.364)
+    // B4 (493.883) = (101238.552)
+    // C5 (523.251) = (95556.435)
+}
+
+void main(void)
+{
+	lpInit();
+	buzzerInit();
+	lightInit();
+
+	uprintf("%s\n\r", "Lab 8: Music Player");
+
+
+	// Schedule the first callback events for LED flashing and push button checking.
+	// Those trigger callback chains. The time unit is millisecond.
+	schdCallback(checkPushButton, 1005);
+	schdCallback(soundUpdate, 1010);
+
+	// Loop forever
+	while (true) {
+		schdExecute();
+	}
+}
