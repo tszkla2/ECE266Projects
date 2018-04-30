@@ -13,16 +13,19 @@ ASM_SRCS += \
 ../pwmled.asm 
 
 C_SRCS += \
+../light.c \
 ../main.c \
 ../pwmled.c \
 ../tm4c123gh6pm_startup_ccs.c 
 
 C_DEPS += \
+./light.d \
 ./main.d \
 ./pwmled.d \
 ./tm4c123gh6pm_startup_ccs.d 
 
 OBJS += \
+./light.obj \
 ./main.obj \
 ./pwmBuzzer.obj \
 ./pwmled.obj \
@@ -33,12 +36,14 @@ ASM_DEPS += \
 ./pwmled.d 
 
 OBJS__QUOTED += \
+"light.obj" \
 "main.obj" \
 "pwmBuzzer.obj" \
 "pwmled.obj" \
 "tm4c123gh6pm_startup_ccs.obj" 
 
 C_DEPS__QUOTED += \
+"light.d" \
 "main.d" \
 "pwmled.d" \
 "tm4c123gh6pm_startup_ccs.d" 
@@ -48,6 +53,7 @@ ASM_DEPS__QUOTED += \
 "pwmled.d" 
 
 C_SRCS__QUOTED += \
+"../light.c" \
 "../main.c" \
 "../pwmled.c" \
 "../tm4c123gh6pm_startup_ccs.c" 

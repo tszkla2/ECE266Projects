@@ -11,13 +11,13 @@
 #include <driverlib/sysctl.h>
 #include "launchpad.h"
 #include "pwmBuzzer.h"
+#include "light.h"
 
 //static enum {Run, Pause}
 //sysState = Pause;
 uint8_t sysStateLed;
 uint8_t sysStateBuz;
 uint8_t currSong = 0;
-uint8_t sysStateDay = 0;    // 0 = night and 1 = day
 int counts = 0;
 
 /*
@@ -142,41 +142,18 @@ pwmledUpdate(uint32_t time)
         schdCallback(pwmledUpdate, time + 10);
     }
 }
-
-int song[]= {4,14,3,14,2,14,3,14,4,14,4,14,4,14,3,14,3,14,3,14,4,14,6,14,6,14,4,14,3,14,2,14,3,14,4,14,4,14,4,14,4,14,3,14,3,14,4,14,3,14,2,14,14,14}; // put song here
-int song2[]= {0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,5,14,5,14,6,14,7,14,7,14,6,14,5,14,6,14,7,14,5,14,3,14,3,14,4,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,0,14,0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,14,14};
-int song3[]= {3,14,6,14,6,14,3,14,3,14,4,14,4,14,3,14,3,14,6,14,6,14,7,14,7,14,8,14,6,14,8,14,8,14,9,14,9,14,9,14,7,14,7,14,8,14,8,14,8,14,6,14,6,14,7,14,7,14,7,14,6,14,5,14,3,14,4,14,5,14,6,14,6,14,14,14};
-int song4[]= {3,14,3,14,5,14,5,14,4,14,5,14,4,14,3,14,5,14,5,14,7,14,7,14,6,14,7,14,6,14,5,14,8,14,8,14,8,14,7,14,7,14,7,14,8,14,8,14,8,14,7,14,6,14,6,14,6,14,5,14,5,14,5,14,4,14,5,14,4,14,3,14,14,14};
-int song5[]= {1,14,3,14,8,14,7,14,6,14,1,14,3,14,6,14,5,14,2,14,3,14,9,14,6,14,7,14,7,14,6,14,4,14,3,14,1,14,3,14,8,14,7,14,6,14,1,14,3,14,6,14,5,14,2,14,6,14,9,14,8,14,6,14,7,14,4,14,5,14,6,14,14,14};
+int song[]= {4,14,3,14,2,14,3,14,4,14,4,14,4,14,3,14,3,14,3,14,4,14,6,14,6,14,4,14,3,14,2,14,3,14,4,14,4,14,4,14,4,14,3,14,3,14,4,14,3,14,2,14,14,14}; //Mary Had 54
+//int song2[]= {0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,5,14,5,14,6,14,7,14,7,14,6,14,5,14,6,14,7,14,5,14,3,14,3,14,4,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,0,14,0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,14,14};// Spider
+int song3[]= {3,14,6,14,6,14,3,14,3,14,4,14,4,14,3,14,3,14,6,14,6,14,7,14,7,14,8,14,6,14,8,14,8,14,9,14,9,14,9,14,7,14,7,14,8,14,8,14,8,14,6,14,6,14,7,14,7,14,7,14,6,14,5,14,3,14,4,14,5,14,6,14,6,14,14,14}; // Bingo 76
+//int song4[]= {3,14,3,14,5,14,5,14,4,14,5,14,4,14,3,14,5,14,5,14,7,14,7,14,6,14,7,14,6,14,5,14,8,14,8,14,8,14,7,14,7,14,7,14,8,14,8,14,8,14,7,14,6,14,6,14,6,14,5,14,5,14,5,14,4,14,5,14,4,14,3,14,14,14}; // Humpty
+//int song5[]= {1,14,3,14,8,14,7,14,6,14,1,14,3,14,6,14,5,14,2,14,3,14,9,14,6,14,7,14,7,14,6,14,4,14,3,14,1,14,3,14,8,14,7,14,6,14,1,14,3,14,6,14,5,14,2,14,6,14,9,14,8,14,6,14,7,14,4,14,5,14,6,14,14,14}; //Rockabye
+int song6[]={2,14,2,14,6,14,6,14,7,14,7,14,6,14,5,14,5,14,4,14,4,14,3,14,3,14,2,14,6,14,6,14,5,14,5,14,4,14,4,14,3,14,6,14,6,14,5,14,5,14,4,14,4,14,3,14,2,14,2,14,6,14,6,14,7,14,7,14,6,14,5,14,5,14,4,14,4,14,3,14,3,14,2,14,14,14}; //Twinkle 86
+int song7[]={4,14,4,14,4,14,4,14,4,14,4,14,4,14,6,14,2,14,3,14,4,14,5,14,5,14,5,14,5,14,5,14,4,14,4,14,4,14,4,14,3,14,3,14,4,14,3,14,6,14,4,14,4,14,4,14,4,14,4,14,4,14,4,14,6,14,2,14,3,14,4,14,5,14,5,14,5,14,5,14,5,14,4,14,4,14,4,14,6,14,6,14,5,14,3,14,2,14,14,14}; //Jingle 98
 void soundUpdate(uint32_t time)
 {
-	
+	int lightSens = lightGet();
 	if(sysStateBuz == 1){
-	 if(sysStateDay == 1){   // Day time
-	    if(currSong == 0){
-	        buzzerOn(intensityBuzzerTable[song[counts]].pwmPeriod, intensityBuzzerTable[song[counts]].pwmPeriod - intensityBuzzerTable[song[counts]].pwmDutyCycle);
-	        counts++;
-	        if(counts == 75)
-	        {
-	            counts = 0;
-	        }
-	        schdCallback(soundUpdate, time + 300);
-	    }
-	    else if(currSong == 1){
-	        buzzerOn(intensityBuzzerTable[song2[counts]].pwmPeriod, intensityBuzzerTable[song2[counts]].pwmPeriod - intensityBuzzerTable[song2[counts]].pwmDutyCycle);
-	        counts++;
-	        if(counts == 75)
-	        {
-	            counts = 0;
-	        }
-	        schdCallback(soundUpdate, time + 300);
-	    }
-	    else
-	    {
-	        schdCallback(soundUpdate, time + 200);
-	    }
-	  }
-	  else{   // Day time
+	 if(lightSens >= 2000){   // Day time
 	    if(currSong == 0){
 	        buzzerOn(intensityBuzzerTable[song3[counts]].pwmPeriod, intensityBuzzerTable[song3[counts]].pwmPeriod - intensityBuzzerTable[song3[counts]].pwmDutyCycle);
 	        counts++;
@@ -187,9 +164,33 @@ void soundUpdate(uint32_t time)
 	        schdCallback(soundUpdate, time + 300);
 	    }
 	    else if(currSong == 1){
-	        buzzerOn(intensityBuzzerTable[song4[counts]].pwmPeriod, intensityBuzzerTable[song4[counts]].pwmPeriod - intensityBuzzerTable[song4[counts]].pwmDutyCycle);
+	        buzzerOn(intensityBuzzerTable[song7[counts]].pwmPeriod, intensityBuzzerTable[song7[counts]].pwmPeriod - intensityBuzzerTable[song7[counts]].pwmDutyCycle);
 	        counts++;
-	        if(counts == 75)
+	        if(counts == 98)
+	        {
+	            counts = 0;
+	        }
+	        schdCallback(soundUpdate, time + 300);
+	    }
+	    else
+	    {
+	        schdCallback(soundUpdate, time + 200);
+	    }
+	  }
+	  else{   // Night time
+	    if(currSong == 0){
+	        buzzerOn(intensityBuzzerTable[song[counts]].pwmPeriod, intensityBuzzerTable[song[counts]].pwmPeriod - intensityBuzzerTable[song[counts]].pwmDutyCycle);
+	        counts++;
+	        if(counts == 53)
+	        {
+	            counts = 0;
+	        }
+	        schdCallback(soundUpdate, time + 300);
+	    }
+	    else if(currSong == 1){
+	        buzzerOn(intensityBuzzerTable[song6[counts]].pwmPeriod, intensityBuzzerTable[song6[counts]].pwmPeriod - intensityBuzzerTable[song6[counts]].pwmDutyCycle);
+	        counts++;
+	        if(counts == 85)
 	        {
 	            counts = 0;
 	        }
@@ -231,7 +232,7 @@ void main(void)
 	lpInit();
 	pwmledInit();
 	buzzerInit();
-
+	lightInit();
 	uprintf("%s\n\r", "Lab 8: Music Player");
 
 
