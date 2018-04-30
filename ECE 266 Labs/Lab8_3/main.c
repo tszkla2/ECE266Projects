@@ -87,10 +87,9 @@ checkPushButton(uint32_t time)
 	    else if(sysStateLed == 1)
 	        sysStateLed = 0;
 	    currSong++;
-	    if(currSong == 2){
+		counts = 0;
+	    if(currSong == 2)
 	        currSong = 0;
-	        counts = 0;
-	 	}
 	    buzzerOn(intensityBuzzerTable[14].pwmPeriod, intensityBuzzerTable[14].pwmPeriod - intensityBuzzerTable[14].pwmDutyCycle);
 		delay = 250;
 		break;
