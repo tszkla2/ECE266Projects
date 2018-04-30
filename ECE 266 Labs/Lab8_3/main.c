@@ -117,22 +117,23 @@ checkPushButton(uint32_t time)
 void
 pwmledUpdate(uint32_t time)
 {
-    static enum color_t {RED = 0, GREEN = 1, BLUE = 2} color = RED;     // Current color to display
-    static int seg = 0;                                                 // Current segment of PWM settings
+    static enum color_t {RED = 0, GREEN = 1, BLUE = 2} color = BLUE;     // Current off state
+    static int seg = 4;                                                 // Current segment of PWM settings
+    int lightSens = lightGet();                                         // Current Light sensor state
 
     if (sysStateLed == 1) {
         // Set up PWM parameters for the three sub-LEDs. Only one LED is lit at a time.
         pwm_t off = {0, 200};
+        if(lightSens >= 2000){   // Day time
+            color = RED;
+        }
+        else{
+            color = BLUE;
+        }
         pwm_t red = (color == RED) ? pwmTable[seg].pwm : off;
-        pwm_t green = (color == GREEN) ? pwmTable[seg].pwm : off;
+        pwm_t green = off;
         pwm_t blue = (color == BLUE) ? pwmTable[seg].pwm : off;
         pwmledSetColor(red, green, blue);
-
-        // Move to the next segment, switch color on warp-around
-        seg = (seg + 1) % LEGS;
-        if (seg == 0) {
-            color = (enum color_t) ((color + 1) % 3);
-        }
 
         schdCallback(pwmledUpdate, time + pwmTable[seg].duration);
     }
@@ -141,6 +142,8 @@ pwmledUpdate(uint32_t time)
         schdCallback(pwmledUpdate, time + 10);
     }
 }
+
+// ---LIST OF SONGS:
 int song[]= {4,14,3,14,2,14,3,14,4,14,4,14,4,14,3,14,3,14,3,14,4,14,6,14,6,14,4,14,3,14,2,14,3,14,4,14,4,14,4,14,4,14,3,14,3,14,4,14,3,14,2,14,14,14}; //Mary Had 54
 //int song2[]= {0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,5,14,5,14,6,14,7,14,7,14,6,14,5,14,6,14,7,14,5,14,3,14,3,14,4,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,0,14,0,14,3,14,3,14,3,14,4,14,5,14,5,14,5,14,4,14,3,14,4,14,5,14,3,14,14,14};// Spider
 int song3[]= {3,14,6,14,6,14,3,14,3,14,4,14,4,14,3,14,3,14,6,14,6,14,7,14,7,14,8,14,6,14,8,14,8,14,9,14,9,14,9,14,7,14,7,14,8,14,8,14,8,14,6,14,6,14,7,14,7,14,7,14,6,14,5,14,3,14,4,14,5,14,6,14,6,14,14,14}; // Bingo 76
@@ -148,6 +151,7 @@ int song3[]= {3,14,6,14,6,14,3,14,3,14,4,14,4,14,3,14,3,14,6,14,6,14,7,14,7,14,8
 //int song5[]= {1,14,3,14,8,14,7,14,6,14,1,14,3,14,6,14,5,14,2,14,3,14,9,14,6,14,7,14,7,14,6,14,4,14,3,14,1,14,3,14,8,14,7,14,6,14,1,14,3,14,6,14,5,14,2,14,6,14,9,14,8,14,6,14,7,14,4,14,5,14,6,14,14,14}; //Rockabye
 int song6[]={2,14,2,14,6,14,6,14,7,14,7,14,6,14,5,14,5,14,4,14,4,14,3,14,3,14,2,14,6,14,6,14,5,14,5,14,4,14,4,14,3,14,6,14,6,14,5,14,5,14,4,14,4,14,3,14,2,14,2,14,6,14,6,14,7,14,7,14,6,14,5,14,5,14,4,14,4,14,3,14,3,14,2,14,14,14}; //Twinkle 86
 int song7[]={4,14,4,14,4,14,4,14,4,14,4,14,4,14,6,14,2,14,3,14,4,14,5,14,5,14,5,14,5,14,5,14,4,14,4,14,4,14,4,14,3,14,3,14,4,14,3,14,6,14,4,14,4,14,4,14,4,14,4,14,4,14,4,14,6,14,2,14,3,14,4,14,5,14,5,14,5,14,5,14,5,14,4,14,4,14,4,14,6,14,6,14,5,14,3,14,2,14,14,14}; //Jingle 98
+
 void soundUpdate(uint32_t time)
 {
 	int lightSens = lightGet();
@@ -225,7 +229,6 @@ void soundUpdate(uint32_t time)
 	// G5 (783.99) = (63776.324)
 }
 
-// {
 void main(void)
 {
 	lpInit();
