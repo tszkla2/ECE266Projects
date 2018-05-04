@@ -33,9 +33,24 @@ pwmSeg_t pwmTable [] = {
     {{2, 200}, 100},
     {{3, 200}, 100},
     {{4, 200}, 100},
-    {{5, 200}, 100} // LED state for solid light
+    {{5, 200}, 100},
+    {{6, 200}, 100},
+    {{7, 200}, 100},
+    {{8, 200}, 100},
+    {{9, 200}, 100},
+    {{10, 200}, 200},
+    {{9, 200}, 100},
+    {{8, 200}, 100},
+    {{7, 200}, 100},
+    {{6, 200}, 100},
+    {{5, 200}, 100},
+    {{4, 200}, 100},
+    {{3, 200}, 100},
+    {{2, 200}, 100},
+    {{1, 200}, 100}
 };
 
+#define	LEGS	(sizeof(pwmTable)/sizeof(pwmTable[0]))
 
 pwmB_t intensityBuzzerTable[] = {
 
@@ -66,8 +81,7 @@ checkPushButton(uint32_t time)
 	uint32_t delay;
 
 	switch (code) {
-	case 1: // Change song
-	    // LED state is always on
+	case 1:
 	    if(sysStateLed == 0)
 	        sysStateLed = 1;
 	    else if(sysStateLed == 1)
@@ -80,7 +94,7 @@ checkPushButton(uint32_t time)
 		delay = 250;
 		break;
 
-	case 2: // Start and pause songs
+	case 2:
 	    if(sysStateBuz == 0)
 	        sysStateBuz = 1;
 	    else if(sysStateBuz == 1){
@@ -111,10 +125,10 @@ pwmledUpdate(uint32_t time)
         // Set up PWM parameters for the three sub-LEDs. Only one LED is lit at a time.
         pwm_t off = {0, 200};
         if(lightSens >= 2000){   // Day time
-            color = RED;    // Red for day time
+            color = RED;
         }
         else{
-            color = BLUE;   // Green for night time
+            color = BLUE;
         }
         pwm_t red = (color == RED) ? pwmTable[seg].pwm : off;
         pwm_t green = off;
@@ -123,7 +137,7 @@ pwmledUpdate(uint32_t time)
 
         schdCallback(pwmledUpdate, time + pwmTable[seg].duration);
     }
-    else
+    else {
         // Check again after 10 ms
         schdCallback(pwmledUpdate, time + 10);
     }
@@ -140,7 +154,7 @@ void soundUpdate(uint32_t time)
 	int lightSens = lightGet();
 	if(sysStateBuz == 1){
 	 if(lightSens >= 2000){   // Day time
-	    if(currSong == 0){  // Song 1
+	    if(currSong == 0){
 	        buzzerOn(intensityBuzzerTable[song3[counts]].pwmPeriod, intensityBuzzerTable[song3[counts]].pwmPeriod - intensityBuzzerTable[song3[counts]].pwmDutyCycle);
 	        counts++;
 	        if(counts == 75)
@@ -149,7 +163,7 @@ void soundUpdate(uint32_t time)
 	        }
 	        schdCallback(soundUpdate, time + 300);
 	    }
-	    else if(currSong == 1){ // Song 2
+	    else if(currSong == 1){
 	        buzzerOn(intensityBuzzerTable[song7[counts]].pwmPeriod, intensityBuzzerTable[song7[counts]].pwmPeriod - intensityBuzzerTable[song7[counts]].pwmDutyCycle);
 	        counts++;
 	        if(counts == 98)
@@ -164,7 +178,7 @@ void soundUpdate(uint32_t time)
 	    }
 	  }
 	  else{   // Night time
-	    if(currSong == 0){ // Song 1
+	    if(currSong == 0){
 	        buzzerOn(intensityBuzzerTable[song[counts]].pwmPeriod, intensityBuzzerTable[song[counts]].pwmPeriod - intensityBuzzerTable[song[counts]].pwmDutyCycle);
 	        counts++;
 	        if(counts == 53)
@@ -173,7 +187,7 @@ void soundUpdate(uint32_t time)
 	        }
 	        schdCallback(soundUpdate, time + 300);
 	    }
-	    else if(currSong == 1){ // Song 2
+	    else if(currSong == 1){
 	        buzzerOn(intensityBuzzerTable[song6[counts]].pwmPeriod, intensityBuzzerTable[song6[counts]].pwmPeriod - intensityBuzzerTable[song6[counts]].pwmDutyCycle);
 	        counts++;
 	        if(counts == 85)

@@ -123,7 +123,7 @@ pwmledUpdate(uint32_t time)
 
         schdCallback(pwmledUpdate, time + pwmTable[seg].duration);
     }
-    else
+    else {
         // Check again after 10 ms
         schdCallback(pwmledUpdate, time + 10);
     }

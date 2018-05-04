@@ -1,0 +1,69 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../tm4c123gh6pm.cmd 
+
+ASM_SRCS += \
+../pwmBuzzer.asm \
+../pwmled.asm 
+
+C_SRCS += \
+../light.c \
+../main.c \
+../pwmBuzzer.c \
+../pwmled.c \
+../tm4c123gh6pm_startup_ccs.c 
+
+C_DEPS += \
+./light.d \
+./main.d \
+./pwmBuzzer.d \
+./pwmled.d \
+./tm4c123gh6pm_startup_ccs.d 
+
+OBJS += \
+./light.obj \
+./main.obj \
+./pwmBuzzer.obj \
+./pwmled.obj \
+./tm4c123gh6pm_startup_ccs.obj 
+
+ASM_DEPS += \
+./pwmBuzzer.d \
+./pwmled.d 
+
+OBJS__QUOTED += \
+"light.obj" \
+"main.obj" \
+"pwmBuzzer.obj" \
+"pwmled.obj" \
+"tm4c123gh6pm_startup_ccs.obj" 
+
+C_DEPS__QUOTED += \
+"light.d" \
+"main.d" \
+"pwmBuzzer.d" \
+"pwmled.d" \
+"tm4c123gh6pm_startup_ccs.d" 
+
+ASM_DEPS__QUOTED += \
+"pwmBuzzer.d" \
+"pwmled.d" 
+
+C_SRCS__QUOTED += \
+"../light.c" \
+"../main.c" \
+"../pwmBuzzer.c" \
+"../pwmled.c" \
+"../tm4c123gh6pm_startup_ccs.c" 
+
+ASM_SRCS__QUOTED += \
+"../pwmBuzzer.asm" \
+"../pwmled.asm" 
+
+
